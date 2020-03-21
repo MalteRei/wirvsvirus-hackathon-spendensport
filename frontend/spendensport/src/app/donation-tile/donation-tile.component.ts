@@ -10,8 +10,7 @@ import { ILink } from '../models/ILink';
 export class DonationTileComponent implements OnInit {
 
   @Input() donation: IDonation | undefined;
-   
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
