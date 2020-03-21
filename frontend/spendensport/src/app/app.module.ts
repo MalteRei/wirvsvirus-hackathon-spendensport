@@ -21,7 +21,7 @@ export const configFactory = (configService: ConfigService) => {
   declarations: [
     AppComponent,
     GoalComponent,
-    GoalListComponent
+    GoalListComponent,
   ],
   imports: [
     BrowserModule,

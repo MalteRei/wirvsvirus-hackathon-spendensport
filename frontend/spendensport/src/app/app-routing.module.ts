@@ -7,7 +7,7 @@ import { GoalListComponent } from './goal-list/goal-list.component';
 const routes: Routes = [
   { path: 'goals', component: GoalListComponent},
   { path: 'goal', component: GoalComponent},
-  { path: '', redirectTo: '/goals', pathMatch: 'full'}
+  { path: '', redirectTo: 'goals', pathMatch: 'full'}
 ];
 
 @NgModule({

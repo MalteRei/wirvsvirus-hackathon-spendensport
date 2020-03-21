@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 })
 export class GoalComponent implements OnInit {
 
-  private CurrentGoal: IGoal = new Goal('Mein Ziel', 0);
+  private CurrentGoal: IGoal = new Goal('Mein Ziel', 0, false);
 
   public get currentGoal(): IGoal {
     return this.CurrentGoal;
@@ -30,7 +30,7 @@ export class GoalComponent implements OnInit {
   public submitGoal() {
     this.goalStoreService.addGoal(this.CurrentGoal);
     this.goalStoreService.goals.forEach(goal=> console.dir(goal));
-    this.CurrentGoal = new Goal('Mein Ziel', 0);
+    this.CurrentGoal = new Goal('Mein Ziel', 0, false);
     this.router.navigate(['/goals']);
   }
 }
