@@ -19,5 +19,9 @@ export class GoalListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public onComplete(goal: IGoal) {
+    goal.done = true;
+  }
+
 
 }

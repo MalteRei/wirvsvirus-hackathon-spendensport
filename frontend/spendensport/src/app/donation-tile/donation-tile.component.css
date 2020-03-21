@@ -1,0 +1,103 @@
+.card {
+    background-color: var(--color-primary);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 25px;
+    border-radius: 15px;
+    transition: all 0.333s ease-out 0s;
+    
+}
+
+.card:hover {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card:hover .card_donate_button {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+
+.card_statistic {
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--color-highlight);
+}
+
+.card_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.card_donate_button {
+    display: inline-block;
+    border: none;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    vertical-align: middle;
+    max-width: 96px;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--color-tertiary);
+    height: 1.375em;
+    transition: all 0.333s ease-out 0s;
+    text-decoration: none;
+}
+
+.card_donation_learn {
+    margin: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.card_donation_container {
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-height: 1.375em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.card_content_description {
+    white-space: pre-wrap;
+    max-width: 100%;
+}
+
+.bar_long {
+    width: 100%;
+    background: var(--color-tertiary);
+    border-radius: 25px;
+  }
+  .bar_short {
+    height: 4px;
+    background: var(--color-highlight);
+    border-radius: 25px;
+    padding: 0;
+  }
+  .statistic_value {
+    text-align: right;
+    color: var(--color-highlight);
+    font-size: 80%;
+  }
