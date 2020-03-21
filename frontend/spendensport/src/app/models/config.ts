@@ -1,6 +1,6 @@
 import { IConfig } from './IConfig';
 
-export class Config implements IConfig{
+export class Config implements IConfig {
     private ApiUrl: string;
 
     public get apiUrl(): string {
