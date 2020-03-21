@@ -1,6 +1,5 @@
 export interface IConfig {
     apiUrl: string;
-
-    donationApiUrl: string
+    donationApiUrl: string;
 }
 
