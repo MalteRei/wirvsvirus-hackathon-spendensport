@@ -137,3 +137,5 @@ i {
     line-height: 1.375em;
     font-family: var(--font-family);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

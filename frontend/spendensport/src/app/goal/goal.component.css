@@ -18,6 +18,7 @@
 
 .set-goal-title{
     justify-self: center;
+  color: var(--color-highlight);
 }
 .back-to-goals{
     justify-self: left;

@@ -1,0 +1,28 @@
+mat-card {
+  width: 100%;
+  margin: 5px;
+}
+
+mat-card-content {
+  display: flex;
+  padding: 5px;
+  margin: auto;
+}
+
+.title {
+  color: var(--color-secondary);
+}
+
+.main-container {
+  display: block;
+  padding-top: 24px;
+  margin: 0 24px 24px;
+}
+
+button {
+  color: var(--color-quaternary);
+  margin: auto;
+  border-color: #56C6A9;
+  align-content: center;
+  size: auto;
+}
