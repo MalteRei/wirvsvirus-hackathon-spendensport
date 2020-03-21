@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoalStoreService } from './services/goal-store.service';
 
 @Component({
   selector: 'app-root',
@@ -8,3 +9,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'spendensport';
 }
+
