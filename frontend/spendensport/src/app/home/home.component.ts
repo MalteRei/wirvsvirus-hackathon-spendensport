@@ -6,10 +6,10 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-goal',
-  templateUrl: './goal.component.html',
-  styleUrls: ['./goal.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class GoalComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   private CurrentGoal: IGoal = new Goal('Mein Ziel', 0, false);
 

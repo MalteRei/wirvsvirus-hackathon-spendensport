@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GoalComponent } from './goal/goal.component';
+import { HomeComponent } from './home/home.component';
 import { GoalListComponent } from './goal-list/goal-list.component';
 import { DonationListComponent } from './donation-list/donation-list.component';
 
@@ -8,7 +8,7 @@ import { DonationListComponent } from './donation-list/donation-list.component';
 const routes: Routes = [
   { path: 'donations', component: DonationListComponent},
   { path: 'goals', component: GoalListComponent},
-  { path: 'goal', component: GoalComponent},
+  { path: 'home', component: HomeComponent},
   { path: '', redirectTo: 'goals', pathMatch: 'full'}
 ];
 

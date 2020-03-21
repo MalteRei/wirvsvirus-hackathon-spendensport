@@ -8,7 +8,7 @@
   </mat-card>
   <mat-card>
       <mat-card-content>
-        <div *ngFor="let goal of goals" [ngClass] = "goal.done?'goal-done':'goal-not-done'">
+        <div *ngFor="let goal of goals" [ngClass] = "goal.done?'home-done':'home-not-done'">
           <p class="set-goal-title">Goal: {{goal.description}}
             <button
           (click)="onComplete(goal)"
