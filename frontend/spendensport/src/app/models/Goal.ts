@@ -4,6 +4,14 @@ export class Goal implements IGoal {
     private Description: string;
     private Stake: number;
     private Done: boolean;
+    private LinkUrlToDonate: string;
+    
+    public get linkUrlToDonate(): string {
+        return this.LinkUrlToDonate;
+    }
+    public set linkUrlToDonate(value: string) {
+        this.LinkUrlToDonate = value;
+    }
 
     public get done(): boolean {
         return this.Done;
@@ -27,9 +35,11 @@ export class Goal implements IGoal {
 
 
 
-    constructor(description: string, stake: number, done: boolean ) {
+    constructor(description: string, stake: number, done: boolean, linkToDonateTo: string ) {
         this.Description = description;
         this.Stake = stake;
         this.Done = done;
+        this.LinkUrlToDonate = linkToDonateTo;
     }
+    
 }

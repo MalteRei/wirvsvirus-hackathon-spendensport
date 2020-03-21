@@ -1,3 +1,19 @@
+<div class="container">
+    <div class="title-background blur">
+    <h1 class="title">Organisation wählen</h1>
+</div>
+<div class="information">
+    <h3 class="choose-prompt">
+        Wähle eine Lieblings-organisation, die du unterstützen möchtest wenn du die Challenge nicht erfüllst.
+    </h3>
+    <app-logo-bonsai class="bonsai-logo"></app-logo-bonsai>
+    <p class="choose-question">
+        Wen möchtest du unterstützen?
+    </p>
+</div>
 <div *ngFor="let donation of projectDonations.data">
     <app-donation-tile [donation] = "donation"></app-donation-tile>
 </div>
+
+</div>
+
