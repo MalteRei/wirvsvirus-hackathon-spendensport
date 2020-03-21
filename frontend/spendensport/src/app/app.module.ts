@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { LogoBonsaiComponent } from './logo-bonsai/logo-bonsai.component';
+import { TitleBarComponent } from './title-bar/title-bar.component';
 
 export const configFactory = (configService: ConfigService) => {
   return () => configService.loadConfig();
@@ -31,7 +32,8 @@ export const configFactory = (configService: ConfigService) => {
     GoalListComponent,
     DonationListComponent,
     DonationTileComponent,
-    LogoBonsaiComponent
+    LogoBonsaiComponent,
+    TitleBarComponent
   ],
   imports: [
     BrowserModule,

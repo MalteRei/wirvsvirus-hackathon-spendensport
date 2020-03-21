@@ -6,21 +6,52 @@
 </div>
 
 <form #goalForm="ngForm" class="content">
-    <label for="goal-description">Ich möchte heute:</label> 
-    <input type="text" class="goal-description" 
-    name = "goal-description"
-    required 
-    [(ngModel)] = "currentGoal.description">
 
-    <label for="goal-description">Wenn ich mein Ziel nicht erreiche, spende ich:</label>
-    <input type="number"
-    class="goal-stake"
-    name="goal-stake"
-    required
-    [(ngModel)] = "currentGoal.stake">
-    <p>&euro;</p>
+    
+
+    <div style="max-width: 86.953125%;" class="input-row">
+        <h2>Ich möchte heute:</h2> 
+        <div class="input-container">
+          <div class="input-box">
+            <input type="text" required [(ngModel)]="currentGoal.description" id="goal-description" name="goal-description" #description="ngModel">
+            <div class="outline">
+              <div class="outline-left"></div>
+              <div class="outline-middle">
+                <label for="goal-description" class="floating-label">Ziel</label>
+              </div>
+              <div class="outline-right"></div>
+            </div>
+          </div>
+          <div class="input-hint">
+            <p *ngIf="description.valid || (description.pristine && description.untouched)" class="hint-text">*Pflicht</p>
+            <p *ngIf="!description.valid && description.errors.required && (description.dirty || description.touched)" class="hint-text hint-required">*Pflicht</p>
+  
+          </div>
+        </div>
+        <h2>Wenn ich mein Ziel nicht erreiche, spende ich:</h2>
+
+        <div style="min-width:0; max-width:128px !important;" class="input-container">
+            <div class="input-box">
+              <input type="number" min="0" id="goal-stake" required [(ngModel)]="currentGoal.stake" name="goal-stake" #stake="ngModel">
+              <div class="outline">
+                <div class="outline-left"></div>
+                <div class="outline-middle">
+                  <label for="goal-stake"  class="floating-label">&euro;</label>
+                </div>
+                <div class="outline-right"></div>
+              </div>
+            </div>
+            <div style="padding:0;" class="input-hint">
+              <p *ngIf="!stake.valid && stake.errors.required" class="hint-text hint-required">*Pflicht</p> 
+              <p *ngIf="!stake.valid && stake.errors.min" class="hint-text hint-required">*min 0</p> 
+
+            </div>
+          </div>
+          
+    </div>
+    <h2>an</h2>
 
     <button [disabled]="!goalForm.form.valid"
      (click)="submitGoal()"
-     type="submit">Ziel hinzufügen</button>
+     type="submit">Organisation auswählen</button>
 </form>
