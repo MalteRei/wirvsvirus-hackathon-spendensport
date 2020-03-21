@@ -9,10 +9,14 @@ import { GoalComponent } from './goal/goal.component';
 
 import {FormsModule} from '@angular/forms';
 import { GoalListComponent } from './goal-list/goal-list.component';
-
 import {Router} from '@angular/router';
 import { DonationListComponent } from './donation-list/donation-list.component';
 import { DonationTileComponent } from './donation-tile/donation-tile.component';
+
+import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 export const configFactory = (configService: ConfigService) => {
   return () => configService.loadConfig();
@@ -31,7 +35,10 @@ export const configFactory = (configService: ConfigService) => {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
   ],
   providers: [
     {

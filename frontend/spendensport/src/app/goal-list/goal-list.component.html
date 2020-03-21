@@ -1,5 +1,17 @@
-<div *ngFor="let goal of goals">
-    <p>Goal: {{goal.description}}</p>
+<div class="main-container">
+  <mat-card>
+    <mat-card-content>
+      <button>
+        <a routerLink="/goal" class="title">add Goal</a>
+      </button>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+      <mat-card-content>
+        <div *ngFor="let goal of goals">
+          <p class="set-goal-title">Goal: {{goal.description}}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
 </div>
 
-<a routerLink="/goal">add Goal</a>

@@ -1,4 +1,6 @@
-export interface IConfig{
+export interface IConfig {
     apiUrl: string;
+
     donationApiUrl: string
 }
+
