@@ -1,0 +1,39 @@
+.title-background{
+    
+    left: 0px;
+    right: 0px;
+    width: 100vw;
+    top: 0px;
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    position: sticky;
+}
+
+.title{
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.backLink{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.back{
+    color: var(--color-highlight);
+    left: 32px;
+    width: 10vw;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+}

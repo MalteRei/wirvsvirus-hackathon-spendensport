@@ -2,24 +2,7 @@
     min-height: 100%;
     width: 100vw;
 }
-.title-background{
-    
-    left: 0px;
-    right: 0px;
-    width: 100vw;
-    top: 0px;
-    padding: 8px;
-    text-align: center;
-    align-content: center;
-    
-    margin: 0;
-    position: sticky;
-}
 
-.title{
-    margin: 0;
-    align-self: center;
-}
 
 .information{
     height: 40vh;

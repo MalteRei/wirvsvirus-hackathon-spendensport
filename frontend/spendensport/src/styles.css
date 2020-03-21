@@ -180,7 +180,7 @@ pre {
 }
 
 a {
-    color: var(--color-text-primary);
+    color: var(--color-highlight);
     font-size: 1em;
     line-height: 1.375em;
     font-family: var(--font-family);

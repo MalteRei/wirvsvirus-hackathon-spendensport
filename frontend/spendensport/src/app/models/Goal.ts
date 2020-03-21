@@ -5,7 +5,7 @@ export class Goal implements IGoal {
     private Stake: number;
     private Done: boolean;
     private LinkUrlToDonate: string;
-    
+
     public get linkUrlToDonate(): string {
         return this.LinkUrlToDonate;
     }
@@ -41,5 +41,4 @@ export class Goal implements IGoal {
         this.Done = done;
         this.LinkUrlToDonate = linkToDonateTo;
     }
-    
 }

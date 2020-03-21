@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-title-bar',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleBarComponent implements OnInit {
 
+  @Input() titleHeader = 'Bonsai';
+  @Input() backLinkName: string | undefined;
+  @Input() backLinkUrl: string | undefined;
   constructor() { }
 
   ngOnInit(): void {
