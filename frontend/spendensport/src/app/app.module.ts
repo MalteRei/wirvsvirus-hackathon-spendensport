@@ -11,6 +11,8 @@ import {FormsModule} from '@angular/forms';
 import { GoalListComponent } from './goal-list/goal-list.component';
 
 import {Router} from '@angular/router';
+import { DonationListComponent } from './donation-list/donation-list.component';
+import { DonationTileComponent } from './donation-tile/donation-tile.component';
 
 export const configFactory = (configService: ConfigService) => {
   return () => configService.loadConfig();
@@ -21,7 +23,9 @@ export const configFactory = (configService: ConfigService) => {
   declarations: [
     AppComponent,
     GoalComponent,
-    GoalListComponent
+    GoalListComponent,
+    DonationListComponent,
+    DonationTileComponent
   ],
   imports: [
     BrowserModule,

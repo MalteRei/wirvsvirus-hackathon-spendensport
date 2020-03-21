@@ -1,0 +1,20 @@
+<div class="card">
+    <img class="card_img" src="{{ donation.carrier.picture.links[0].href }}" alt="{{ donation.carrier.name }}" />
+    <h4>{{ donation.title }}</h4>
+    <p class="card_content_description">{{ donation.summary }}</p>
+    <div class="card_statistic">
+        by {{donation.carrier.name}} | {{donation.open_amount_in_cents / 100}} &euro; fehlen noch | {{donation.donor_count}} Menschen haben bereit gespendet
+    </div>
+    <div class="card_donation_container">
+        <a target="_blank" href="{{getLinkToDonate()}}" class="card_donate_button">
+            <img src="{{ 'https://www.google.com/s2/favicons?domain=' + getLinkToDonate() }}" alt="{{ donation.title }}" />
+            <p class="card_donation_learn">spenden</p>
+        </a>
+    </div>
+    <p class="statistic_value" [ngStyle]="{ 'width.%': donation.progress_percentage }">
+        {{ donation.progress_percentage }}%
+    </p>
+    <div class="bar_long">
+        <div class="bar_short" [ngStyle]="{ 'width.%': donation.progress_percentage }"></div>
+    </div>
+</div>
