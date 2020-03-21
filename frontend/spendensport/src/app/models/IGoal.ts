@@ -3,4 +3,3 @@ export interface IGoal {
     stake: number;
     done: boolean;
 }
-

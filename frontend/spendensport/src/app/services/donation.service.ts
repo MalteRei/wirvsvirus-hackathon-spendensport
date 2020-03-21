@@ -20,7 +20,7 @@ export class DonationService implements OnDestroy {
   public getDonationList(): Observable<IBetterplaceResponseProjects> {
     return this.http
     .get<IBetterplaceResponseProjects>(
-      this.configServices.config.donationApiUrl 
+      this.configServices.config.donationApiUrl
       + 'projects.json?around=Germany&facets=completed%3Afalse|closed%3Afalse|prohibit_donations%3Afalse&order=rank%3ADESC&q=Corona')
     .pipe(takeUntil(this.ngUnsubscribe)).pipe(retry(3));
   }
