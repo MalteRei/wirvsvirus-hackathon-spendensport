@@ -10,7 +10,7 @@
     width: 100vw;
     left: 0;
     top: 0;
-    background: var(--color-tertiary);
+    background: var(--color-primary);
     display: grid;
     gap: 0;
     grid-template-columns: 1fr 3fr 1fr;

@@ -74,7 +74,7 @@ mat-card-header {
 }
 
 button {
-  color: var(--color-quaternary);
+  color: var(--gradient);
   margin: auto;
   border-color: var(--color-highlight);
   align-content: center;
@@ -115,7 +115,7 @@ button {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-bottom: 8px;
-  background: var(--color-tertiary);
+  background: var(--color-primary);
 }
 
 .choose-prompt{
@@ -133,6 +133,13 @@ button {
   border: solid;
   border-radius: 50%;
   border-width: 4px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .choose-question{
@@ -144,4 +151,9 @@ button {
   justify-self: left;
   align-self: flex-end;
   margin: 16px;
+}
+
+.delete-goal{
+  margin-right: 64px;
+  
 }

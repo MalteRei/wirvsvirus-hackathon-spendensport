@@ -32,4 +32,8 @@ export class GoalListComponent implements OnInit {
     this.goalStoreService.removeGoal(goal);
   }
 
+
+ 
+
+
 }
