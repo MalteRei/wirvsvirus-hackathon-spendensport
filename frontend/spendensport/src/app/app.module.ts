@@ -23,6 +23,7 @@ import { TitleBarComponent } from './title-bar/title-bar.component';
 import { MatIconModule } from '@angular/material/icon';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -48,12 +49,10 @@ export const configFactory = (configService: ConfigService) => {
     MatCardModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-<<<<<<< HEAD
     MatDatepickerModule,
-=======
+    MatNativeDateModule, 
     MatInputModule,
     MatIconModule
->>>>>>> 337b46fa4fbf0805c57a0c0e37fa8a86de4dc88e
   ],
   providers: [
     {
