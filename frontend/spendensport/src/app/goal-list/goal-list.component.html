@@ -27,7 +27,7 @@
     <div class="card" *ngFor="let goal of goals">
       <mat-card-content>
         <p class="set-goal-title">Goal: {{goal.description}} </p>
-        <div>
+        <div class="mat-card-container">
           <button
             (click)="onComplete(goal)"
             type="submit">Erledigt
@@ -43,7 +43,7 @@
             Löschen
           </button>
         </div>
-<!--        <p>Noch {{goal.daysLeft()}} Tage bis zur Deadline.</p>-->
+        <p>Noch {{goal.daysLeft()}} Tage bis zur Deadline.</p>
       </mat-card-content>
     </div>
 

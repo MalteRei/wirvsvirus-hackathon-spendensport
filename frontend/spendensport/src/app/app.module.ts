@@ -59,8 +59,9 @@ export const configFactory = (configService: ConfigService) => {
     MatInputModule,
     MatIconModule,
     MatCheckboxModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    MatMenuModule
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [
     {

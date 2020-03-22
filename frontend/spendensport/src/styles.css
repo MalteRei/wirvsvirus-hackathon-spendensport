@@ -231,6 +231,11 @@ button:active {
     border: inherit;
 }
 
+button:hover {
+  border: 2px;
+  border-color: var(--color-highlight);
+}
+
 button:focus {
     outline: none;
 
