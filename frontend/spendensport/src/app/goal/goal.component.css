@@ -1,39 +1,3 @@
-.navigation-bar-background{
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-
-    background: var(--color-quaternary);
-    box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(27.1828px);
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: start;
-}
-
-.set-goal-title{
-    justify-self: center;
-  color: var(--color-highlight);
-}
-.back-to-goals{
-    justify-self: left;
-    padding-right: 35vw;
-    padding-left: 5vw;
-}
-
-.navigation-bar{
-    position: absolute;
-    height: 64px;
-    left: 0%;
-    right: 0%;
-    top: 0;
-}
-
 .content{
     position: absolute;
     width: 317px;

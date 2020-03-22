@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@Angular/material/input';
+import {MatIcon} from '@angular/material/icon';
 import { LogoBonsaiComponent } from './logo-bonsai/logo-bonsai.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 
@@ -44,7 +45,8 @@ export const configFactory = (configService: ConfigService) => {
     MatCardModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    MatIcon
   ],
   providers: [
     {
