@@ -28,6 +28,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ServiceWorkerModule} from '@angular/service-worker';
 
 import { environment } from '../environments/environment';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -58,7 +59,8 @@ export const configFactory = (configService: ConfigService) => {
     MatInputModule,
     MatIconModule,
     MatCheckboxModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MatMenuModule
   ],
   providers: [
     {

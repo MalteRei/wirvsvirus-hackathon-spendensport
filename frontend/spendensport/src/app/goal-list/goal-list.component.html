@@ -1,19 +1,41 @@
-<app-title-bar titleHeader="Meine Ziele"></app-title-bar>
-<div class="main-container" *ngFor="let goal of goals" [ngClass] = "goal.done?'home-done':'home-not-done'">
+<mat-card-header>
+  <div class="menu-container">
+  <button mat-icon-button>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+    <mat-menu>
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+    </mat-menu>
+  <mat-card-title><h1>Meine Ziele</h1></mat-card-title>
+  </div>
+</mat-card-header>
+<div class="main-container">
 
-  <mat-card>
+  <div class="main-container" *ngFor="let goal of goals" [ngClass]="goal.done?'home-done':'home-not-done'">
+
+    <mat-card>
       <mat-card-content>
-          <p class="set-goal-title">Goal: {{goal.description}}
-            <button
-          (click)="onComplete(goal)"
-          type="submit">Erledigt</button>
-          </p>
+        <p class="set-goal-title">Goal: {{goal.description}} </p>
+        <div>
+          <button
+            (click)="onComplete(goal)"
+            type="submit">Erledigt
+          </button>
+          <mat-checkbox [(ngModel)]="goal.done">
+          </mat-checkbox>
+        </div>
 
-          <p>Days to go: {{goal.daysLeft()}}</p>
+
+        <p>Days to go: {{goal.daysLeft()}}</p>
       </mat-card-content>
     </mat-card>
+  </div>
+  <mat-card-actions>
+    <a routerLink="/goal" class="add-goal-button">
+      <i style="font-size: 50px;" class="material-icons">add</i>
+    </a>
+  </mat-card-actions>
 </div>
-<a routerLink="/goal" class="add-goal-button">
-  <i style="font-size: 50px;" class="material-icons">add</i>
-</a>
-

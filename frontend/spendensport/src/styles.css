@@ -115,6 +115,7 @@ h1 {
     font-size: 2.625em;
     line-height: 3.25em;
     margin: 0;
+  align-self: center;
 }
 
 h2 {
@@ -265,15 +266,15 @@ button:focus {
     margin-left: 32px;
     margin-right: 32px;
   }
-  
+
   .input-container {
     margin-bottom: 16px;
     margin-top: 16px;
     min-width: 20vw;
   }
-  
-  
-  
+
+
+
   .input-box {
     border: none;
     border-width: medium;

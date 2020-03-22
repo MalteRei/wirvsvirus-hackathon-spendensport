@@ -8,15 +8,20 @@ mat-card-content {
   padding: 5px;
   margin: auto;
   justify-content: center;
-}
-
-.title {
-  color: var(--color-secondary);
+  flex-direction: column;
 }
 
 .main-container {
   display: block;
   margin: 0 24px 24px;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-container {
 }
 
 button {
@@ -43,5 +48,10 @@ button {
 }
 
 
-.goal-done{background-color: green;}
-.goal-not-done{background-color: red;}
+.goal-done {
+  background-color: green;
+}
+
+.goal-not-done {
+  background-color: red;
+}

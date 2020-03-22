@@ -4,4 +4,5 @@ export interface IGoal {
     done: boolean;
     linkUrlToDonate: string;
     date: Date;
+
 }

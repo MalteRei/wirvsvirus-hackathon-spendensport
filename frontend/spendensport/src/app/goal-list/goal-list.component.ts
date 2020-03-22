@@ -24,4 +24,8 @@ export class GoalListComponent implements OnInit {
     goal.done = true;
   }
 
+  public daysLeft() {
+
+  }
+
 }
