@@ -1,4 +1,4 @@
-# Spendensport // GoBonsai.de
+# #WirVsVirus Hackathon – Spendensport // GoBonsai.de
 
 GoBonsai ist eine App, die Challenges und Einsatz (Spende) miteinander verbindet.
 Eine Herausforderung wird erstellt, indem Menge, (Sport)Art und Dauer festgelegt werden (K) und dann Spende und Organisation (B) ausgewählt wird.
