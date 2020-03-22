@@ -5,5 +5,5 @@ export interface IGoal {
     linkUrlToDonate: string;
     linkUrlGoal: string;
     date: Date;
-    setDone(value:boolean);
+    setDone(value: boolean);
 }

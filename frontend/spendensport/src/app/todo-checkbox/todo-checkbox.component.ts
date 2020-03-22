@@ -9,7 +9,7 @@ export class TodoCheckboxComponent implements OnInit {
 
   @Input() todoContent: string;
 
-  private Model: boolean = false;
+  private Model = false;
   private ModelChange: EventEmitter<boolean> = new EventEmitter();
 
   @Output() public get modelChange(): EventEmitter<boolean> {

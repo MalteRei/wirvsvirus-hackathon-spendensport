@@ -24,16 +24,7 @@ export class GoalListComponent implements OnInit {
     goal.done = true;
   }
 
-  /*public daysLeft() {
-
-  }*/
-
   public deleteGoal(goal: IGoal) {
     this.goalStoreService.removeGoal(goal);
   }
-
-
- 
-
-
 }

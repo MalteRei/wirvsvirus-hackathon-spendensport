@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class GoalCreationService {
 
-  private GoalToCreate: IGoal 
-  = new Goal('mein Ziel', 5, false, 'https://www.betterplace.org/', new Date(), "https://png.pngtree.com/svg/20170118/donation_604080.png");
+  private GoalToCreate: IGoal
+  = new Goal('mein Ziel', 5, false, 'https://www.betterplace.org/', new Date(), 'https://png.pngtree.com/svg/20170118/donation_604080.png');
 
   public get goalToCreate(): IGoal {
     return this.GoalToCreate;
@@ -23,9 +23,9 @@ export class GoalCreationService {
 
   public submitGoal() {
     this.goalStoreService.addGoal(this.GoalToCreate);
-    this.GoalToCreate 
+    this.GoalToCreate
     = new Goal('mein Ziel',
-     5, false, 'https://www.betterplace.org/', new Date(), "https://png.pngtree.com/svg/20170118/donation_604080.png");
+     5, false, 'https://www.betterplace.org/', new Date(), 'https://png.pngtree.com/svg/20170118/donation_604080.png');
     this.router.navigate(['/goals']);
   }
 
