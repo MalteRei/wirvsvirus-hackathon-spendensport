@@ -23,7 +23,11 @@ export class HomeComponent implements OnInit {
 
   constructor(private goalCreationService: GoalCreationService) { }
 
-  minDate = new Date();
+  private static MinDate = new Date();
+
+  public get minDate(): Date {
+    return HomeComponent.MinDate;
+  }
 
   ngOnInit(): void {
   }

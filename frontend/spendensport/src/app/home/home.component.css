@@ -162,3 +162,11 @@
   ::ng-deep .mat-calendar-arrow{
     border-top-color: var(--color-text-secondary)!important;
   }
+
+  ::ng-deep .mat-calendar-body-disabled{
+    color: var(--color-text-secondary);
+  }
+
+  ::ng-deep.mat-calendar-body-disabled > ::ng-deep.mat-calendar-body-cell-content:not(.mat-calendar-body-selected){
+    color: var(--color-text-secondary)!important;
+  }
