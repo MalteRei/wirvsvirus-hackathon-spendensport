@@ -12,11 +12,21 @@
   <mat-card-title><h1>Meine Ziele</h1></mat-card-title>
   </div>
 </mat-card-header>
+<div class="information">
+  <h3 class="choose-prompt">
+      Los geht's!
+  </h3>
+  <div class="bonsai-logo">
+    <app-logo-bonsai></app-logo-bonsai>
+  </div>
+  <p class="choose-question">
+      Offene Ziele
+  </p>
+</div>
 <div class="main-container">
-
-  <div class="main-container" *ngFor="let goal of goals" [ngClass]="goal.done?'home-done':'home-not-done'">
-
-    <mat-card>
+  
+  
+    <div class="card" *ngFor="let goal of goals">
       <mat-card-content>
         <p class="set-goal-title">Goal: {{goal.description}} </p>
         <div>
@@ -31,11 +41,12 @@
 
         <p>Days to go: {{goal.daysLeft()}}</p>
       </mat-card-content>
-    </mat-card>
-  </div>
-  <mat-card-actions>
-    <a routerLink="/goal" class="add-goal-button">
-      <i style="font-size: 50px;" class="material-icons">add</i>
-    </a>
-  </mat-card-actions>
+    </div>
+  
+
 </div>
+<mat-card-actions>
+  <a routerLink="/goal" class="add-goal-button">
+    <i style="font-size: 50px;" class="material-icons">add</i>
+  </a>
+</mat-card-actions>
