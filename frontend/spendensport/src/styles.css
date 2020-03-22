@@ -8,7 +8,7 @@
 
 :root {
 /*color-highlight is the brand color. It can be used to emphasize certain elements.*/
---color-highlight: #56C6A9;
+--color-highlight: #84DD90/*#56C6A9*/;
 /*color-primary is used on elements in the foreground the language learner can interact with. For example the background color of a card.*/
 --color-primary: #ffffff;
 /*color-secondary is used for elements in the background. For example the color behind the cards.*/
@@ -31,7 +31,7 @@
 @media (prefers-color-scheme: dark) {
 /*Define css variables in dark mode.*/
     :root {
-    --color-highlight: #008890;
+    --color-highlight: #84DD90/*#008890*/;
     --color-primary: #1B1A19;
     --color-secondary: #252423;
     --color-tertiary: #3B3A39;

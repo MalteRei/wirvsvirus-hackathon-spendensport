@@ -29,6 +29,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 
 import { environment } from '../environments/environment';
 import {MatMenuModule} from '@angular/material/menu';
+import { TodoCheckboxComponent } from './todo-checkbox/todo-checkbox.component';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -44,7 +45,8 @@ export const configFactory = (configService: ConfigService) => {
     DonationListComponent,
     DonationTileComponent,
     LogoBonsaiComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    TodoCheckboxComponent
   ],
   imports: [
     BrowserModule,

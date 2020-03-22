@@ -25,6 +25,14 @@
 </div>
 <div class="main-container">
     <div class="card" *ngFor="let goal of goals">
+      <h1>{{goal.description}}</h1>
+      <h4>noch {{goal.daysLeft()}} Tage</h4>
+      <hr style="max-width: 256px; width: 50%;">
+      <div class="alternative"> 
+        <h4>oder</h4>
+      </div>
+      <h2>{{goal.stake}} &euro; spenden</h2>
+      <!--
       <mat-card-content>
         <p class="set-goal-title">Goal: {{goal.description}} </p>
         <div>
@@ -43,8 +51,8 @@
             Löschen
           </button>
         </div>
-<!--        <p>Noch {{goal.daysLeft()}} Tage bis zur Deadline.</p>-->
-      </mat-card-content>
+        <p>Noch {{goal.daysLeft()}} Tage bis zur Deadline.</p>
+      </mat-card-content>-->
     </div>
 
 
