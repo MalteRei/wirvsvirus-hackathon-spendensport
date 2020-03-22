@@ -7,8 +7,6 @@ die Kontrollschnittstelle (K), die die Challenge kontrolliert und bestätigt sow
 So können auch neue Arten von Challenges (z.B. Mental Health Übungen, Kreative Aufgaben, Haushalt) mit neuen Spendenmöglichkeiten (z.B. Blutspende, Zeit mit Oma, Abwasch für die ganze Familie) eingefügt werden.
 Entstanden ist die App während des #WirVsVirus Hackathon vom 20.03-22.03.2020, initiiert durch die Bundesregierung, Tech4Germany, Code for Germany, Initiative D21, Impact Hub Berlin, ProjectTogether, Prototype Fund und SEND e.V. 
 
-Live Seite: https://gobonsai.de
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
 
