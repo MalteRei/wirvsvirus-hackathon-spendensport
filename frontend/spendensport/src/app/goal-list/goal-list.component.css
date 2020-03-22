@@ -36,7 +36,7 @@ button {
   width: 64px;
   height: 64px;
   border-radius: 32px;
-  position: absolute;
+  position: fixed;
   left: calc(50vw - 32px);
   bottom: 64px;
   background-color: var(--color-highlight);
