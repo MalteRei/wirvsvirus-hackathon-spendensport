@@ -3,6 +3,8 @@
 IMMER VERWENDEN
 #WirVsVirusHack #WirVsVirusHack015
 
+Assets in den Ordnern oben!
+
 ## Instagram Post
 Als Slide (ein Post mit mehreren Bildern) angedacht
 YT-Link in Text erwähnen - verlinken in Bio
