@@ -1,5 +1,5 @@
 <div class="container">
-    <app-title-bar titleHeader="Organisation wählen"></app-title-bar>
+    <app-title-bar backLinkUrl="/goal" backLinkName="Ziel" titleHeader="Organisation wählen"></app-title-bar>
 
 <div class="information">
     <h3 class="choose-prompt">
@@ -10,9 +10,17 @@
         Wen möchtest du unterstützen?
     </p>
 </div>
-<div *ngFor="let donation of projectDonations.data">
-    <app-donation-tile [donation] = "donation"></app-donation-tile>
+<div *ngIf="projectDonations != null; else loadingBlock" role="listbox">
+    <app-donation-tile *ngFor="let donation of projectDonations.data" [donation] = "donation"></app-donation-tile>
 </div>
+<ng-template #loadingBlock>
+    <div class="loading-block">
+    <div *ngIf="!errorLoading; else errorBlock" class="ellipsis"><div></div><div></div><div></div><div></div></div>
+    <ng-template #errorBlock class="error-block" >
+        <p>😥 Leider gabe es einen Fehler beim Laden. Bitte versuche es später erneut. 😥</p>
+    </ng-template>
+</div>
+</ng-template>
 
 </div>
 

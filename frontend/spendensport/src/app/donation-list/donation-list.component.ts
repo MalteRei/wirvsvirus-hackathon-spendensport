@@ -12,7 +12,13 @@ import { Subject } from 'rxjs';
 export class DonationListComponent implements OnInit, OnDestroy {
 
   private ngUnsubscribe = new Subject();
-  private ProjectDonations: IBetterplaceResponseProjects;
+  private ProjectDonations: IBetterplaceResponseProjects = null;
+  private ErrorLoading = false;
+
+  public get errorLoading() {
+    return this.ErrorLoading;
+  }
+
   public get projectDonations(): IBetterplaceResponseProjects {
     return this.ProjectDonations;
   }
@@ -25,9 +31,12 @@ export class DonationListComponent implements OnInit, OnDestroy {
     this.donationService.getDonationList().pipe(takeUntil(this.ngUnsubscribe)).subscribe(
       result => {
         this.projectDonations = result;
+        this.ErrorLoading = false;
       },
       error => {
-        console.dir(error);
+        this.projectDonations = null;
+        this.ErrorLoading = true;
+
       }
     );
   }

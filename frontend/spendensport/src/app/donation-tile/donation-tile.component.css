@@ -55,7 +55,13 @@
     height: 1.375em;
     transition: all 0.333s ease-out 0s;
     text-decoration: none;
+
 }
+
+.card_donate_button:focus{
+    border: solid;
+}
+
 
 .card_donation_learn {
     margin: 0;

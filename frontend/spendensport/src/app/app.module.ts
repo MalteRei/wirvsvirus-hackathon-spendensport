@@ -17,7 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatInputModule} from '@Angular/material/input';
+import {MatInputModule} from '@angular/material/input';
 import { LogoBonsaiComponent } from './logo-bonsai/logo-bonsai.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,6 +25,9 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ServiceWorkerModule} from '@angular/service-worker';
+
+import { environment } from '../environments/environment';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -54,7 +57,8 @@ export const configFactory = (configService: ConfigService) => {
     MatNativeDateModule,
     MatInputModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {

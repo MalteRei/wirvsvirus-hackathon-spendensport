@@ -8,8 +8,8 @@
           (click)="onComplete(goal)"
           type="submit">Erledigt</button>
           </p>
-        <mat-checkbox *ngIf="">
-        </mat-checkbox>
+
+          <p>Days to go: {{goal.daysLeft()}}</p>
       </mat-card-content>
     </mat-card>
 </div>
