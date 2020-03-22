@@ -24,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -52,7 +53,8 @@ export const configFactory = (configService: ConfigService) => {
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatCheckboxModule
   ],
   providers: [
     {

@@ -1,20 +1,19 @@
 <app-title-bar titleHeader="Meine Ziele"></app-title-bar>
-<div class="main-container">
-  
+<div class="main-container" *ngFor="let goal of goals" [ngClass] = "goal.done?'home-done':'home-not-done'">
+
   <mat-card>
       <mat-card-content>
-        <div *ngFor="let goal of goals" [ngClass] = "goal.done?'home-done':'home-not-done'">
           <p class="set-goal-title">Goal: {{goal.description}}
             <button
           (click)="onComplete(goal)"
           type="submit">Erledigt</button>
           </p>
-        </div>
+        <mat-checkbox *ngIf="">
+        </mat-checkbox>
       </mat-card-content>
     </mat-card>
-
-    <a routerLink="/goal" class="add-goal-button">
-      <i style="font-size: 50px;" class="material-icons">add</i>
-    </a>
 </div>
+<a routerLink="/goal" class="add-goal-button">
+  <i style="font-size: 50px;" class="material-icons">add</i>
+</a>
 
