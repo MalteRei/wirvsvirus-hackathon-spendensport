@@ -13,7 +13,7 @@
           [min]="minDate"
           name="goal-date">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
+          <mat-datepicker [touchUi]="isMobile()" #picker></mat-datepicker>
         </mat-form-field>
         <h2>Folgendes Ziel erreichen:</h2>
         <mat-form-field color= "red">

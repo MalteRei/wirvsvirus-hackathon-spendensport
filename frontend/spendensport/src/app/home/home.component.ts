@@ -24,9 +24,15 @@ export class HomeComponent implements OnInit {
   constructor(private goalCreationService: GoalCreationService) { }
 
   private static MinDate = new Date();
+  
 
   public get minDate(): Date {
     return HomeComponent.MinDate;
+  }
+
+  public isMobile(): boolean{
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(window.navigator.userAgent);
+    return isMobile;
   }
 
   ngOnInit(): void {
