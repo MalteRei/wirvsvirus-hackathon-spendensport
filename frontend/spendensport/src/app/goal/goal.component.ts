@@ -5,6 +5,7 @@ import { GoalStoreService } from '../services/goal-store.service';
 import {Router} from '@angular/router';
 import { GoalCreationService } from '../services/goal-creation.service';
 import {CdkTextareaAutosize} from '@angular/cdk/text-field';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-goal',
