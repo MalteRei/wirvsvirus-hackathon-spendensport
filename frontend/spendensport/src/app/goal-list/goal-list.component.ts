@@ -28,4 +28,8 @@ export class GoalListComponent implements OnInit {
 
   }
 
+  public deleteGoal(goal: IGoal) {
+    this.goalStoreService.removeGoal(goal);
+  }
+
 }
