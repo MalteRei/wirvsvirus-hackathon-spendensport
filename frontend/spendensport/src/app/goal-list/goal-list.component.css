@@ -43,7 +43,7 @@ mat-card-content {
   display: block;
   margin: 0;
   display: grid;
-  gap: 64px 0;
+  gap: 15px 0;
   padding: 15px;
   grid-template-columns: 25vw 50vw 25vw;
   width: 100vw;
@@ -68,12 +68,18 @@ mat-card-header {
 .menu-container {
 }
 
+.mat-card-container {
+  display: flex;
+  align-items: center;
+}
+
 button {
   color: var(--color-quaternary);
   margin: auto;
   border-color: var(--color-highlight);
   align-content: center;
   size: auto;
+
 }
 
 .add-goal-button{
