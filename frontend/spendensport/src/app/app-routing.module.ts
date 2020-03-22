@@ -8,7 +8,7 @@ import { DonationListComponent } from './donation-list/donation-list.component';
 const routes: Routes = [
   { path: 'donations', component: DonationListComponent},
   { path: 'goals', component: GoalListComponent},
-  { path: 'home', component: HomeComponent},
+  { path: 'goal', component: HomeComponent},
   { path: '', redirectTo: 'goals', pathMatch: 'full'}
 ];
 

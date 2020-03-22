@@ -35,9 +35,13 @@
         </mat-form-field>
         <h2>an</h2>
 
-      <button [disabled]="!goalForm.form.valid"
-      (click)="submitGoal()"
-      type="submit">Organisation auswählen</button>
+
+      <div class="button-container">
+        <a routerLink="/donations" class="link-effect" href="#">
+          Organisation auswählen
+          <span class="arrow"></span>
+        </a>
+      </div>
     </div>
     
 </form>
