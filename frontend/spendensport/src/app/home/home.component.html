@@ -1,56 +1,64 @@
 
-<app-title-bar backLinkUrl="/goals" backLinkName="Ziele" titleHeader="Ziel setzten"></app-title-bar>
+<app-title-bar backLinkUrl="/goals" backLinkName="Ziele" titleHeader="Ziel setzen"></app-title-bar>
+
+<div class="main-container">
 <form #goalForm="ngForm" class="content">
+  <div class="card">
 
-    
-
-    <div style="max-width: 86.953125%;" class="input-row">
-        <h2>Ich möchte bis:</h2> 
-        <mat-form-field>
-          <mat-label>Datum</mat-label>
-          <input matInput [matDatepicker]="picker" 
-          [(ngModel)] = 'currentGoal.date' 
-          [min]="minDate"
-          name="goal-date">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker [touchUi]="isMobile()" #picker></mat-datepicker>
-        </mat-form-field>
-        <h2>Folgendes Ziel erreichen:</h2>
-        <mat-form-field color= "red">
-          <textarea aria-label="mein Ziel"
-                    name="goal-description"
-                    #description="ngModel"
-                    id="goal-description"
-                    [(ngModel)]="currentGoal.description"
-                    matInput
-                    cdkTextareaAutosize
-                    #autosize="cdkTextareaAutosize"
-                    cdkAutosizeMinRows="1"
-                    cdkAutosizeMaxRows="5">
-          </textarea>
-        </mat-form-field>
-        <h2>Wenn ich mein Ziel nicht erreiche, spende ich:</h2>
-        <mat-form-field>
-          <input 
-                aria-label="Spendenbetrag in Euro"
-                matInput
-                type="number" 
-                min="0" 
-                id="goal-stake" 
-                [(ngModel)]="currentGoal.stake"
-                name="goal-stake"
-                #stake="ngModel">
-          <mat-icon matSuffix>euro_symbol</mat-icon>
-        </mat-form-field>
-        <h2>an</h2>
-
-
-      <div class="button-container">
-        <a routerLink="/donations" class="link-effect" href="#">
-          Organisation auswählen
-          <span class="arrow"></span>
-        </a>
-      </div>
+  <div style="max-width: 100%" class="input-row">
+  <div class="form-container">
+      <h2>Ich möchte:</h2>
+      <mat-form-field color= "red">
+        <textarea aria-label="mein Ziel"
+                  name="goal-description"
+                  #description="ngModel"
+                  id="goal-description"
+                  [(ngModel)]="currentGoal.description"
+                  matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="5">
+        </textarea>
+      </mat-form-field>
     </div>
     
+    <div class="form-container">
+      <h2>bis zum:</h2>
+      <mat-form-field>
+        <mat-label>Datum</mat-label>
+        <input matInput [matDatepicker]="picker"
+        [(ngModel)] = 'currentGoal.date'
+        [min]="minDate"
+        name="goal-date"
+        readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker [touchUi]="isMobile()" #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <h2>erreichen.</h2>
+
+    <div class="form-container">
+      <h2>Wenn ich mein Ziel nicht erreiche, spende ich:</h2>
+
+      <mat-form-field>
+        <input
+              aria-label="Spendenbetrag in Euro"
+              matInput
+              type="number"
+              min="0"
+              id="goal-stake"
+              [(ngModel)]="currentGoal.stake"
+              name="goal-stake"
+              #stake="ngModel">
+        <mat-icon matSuffix>euro_symbol</mat-icon>
+      </mat-form-field>
+    </div>
+      <h2>an folgende Organisation:</h2>
+
+    <app-button routerLink="/donations">Organisation auswählen</app-button>
+
+  </div>
+</div>
 </form>
+</div>

@@ -24,8 +24,14 @@ import { MatIconModule } from '@angular/material/icon';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ServiceWorkerModule} from '@angular/service-worker';
+
 import { environment } from '../environments/environment';
+import {MatMenuModule} from '@angular/material/menu';
+import { TodoCheckboxComponent } from './todo-checkbox/todo-checkbox.component';
+import { ButtonComponent } from './button/button.component';
+import { LogoBonsaiLoveComponent } from './logo-bonsai-love/logo-bonsai-love.component';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -41,7 +47,10 @@ export const configFactory = (configService: ConfigService) => {
     DonationListComponent,
     DonationTileComponent,
     LogoBonsaiComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    TodoCheckboxComponent,
+    ButtonComponent,
+    LogoBonsaiLoveComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +64,10 @@ export const configFactory = (configService: ConfigService) => {
     MatNativeDateModule,
     MatInputModule,
     MatIconModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    MatCheckboxModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [
     {

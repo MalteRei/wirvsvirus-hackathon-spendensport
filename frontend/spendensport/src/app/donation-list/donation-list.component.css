@@ -10,7 +10,7 @@
     width: 100vw;
     left: 0;
     top: 0;
-    background: var(--color-tertiary);
+    background: var(--color-primary);
     display: grid;
     gap: 0;
     grid-template-columns: 1fr 3fr 1fr;
@@ -43,4 +43,15 @@
 .bonsai-logo{
     grid-column: 2/3;
     grid-row: 2/3;
+}
+
+.error-block{
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 64px;
+    display: flex;
+    flex-direction: row;
 }

@@ -1,37 +1,92 @@
 mat-card {
-  width: 100%;
+  width: 50vw;
+  min-width: 200px;
   margin: 5px;
+  background-color: var(--color-primary);
 }
 
 mat-card-content {
   display: flex;
-  padding: 5px;
+  padding: 10px;
   margin: auto;
+  justify-content: center;
+  flex-direction: column;
+
 }
 
-.title {
-  color: var(--color-secondary);
+.card{
+  grid-column: 2/3;
+  background-color: var(--color-primary);
+
+  min-width: 200px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 16px;
+  text-align: left;
+}
+
+.alternative{
+  top: -20px;
+  position: relative;
+  background-color: var(--color-primary);
+  padding: 0;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .main-container {
   display: block;
-  padding-top: 24px;
-  margin: 0 24px 24px;
+  margin: 0;
+  display: grid;
+  gap: 15px 0;
+  padding: 15px;
+  grid-template-columns: 25vw 50vw 25vw;
+  width: 100vw;
+}
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .card{
+    grid-column: 1/2;
+  }
+
+}
+mat-card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-container {
+}
+
+.mat-card-container {
+  display: flex;
+  align-items: center;
 }
 
 button {
-  color: var(--color-quaternary);
+  color: var(--gradient);
   margin: auto;
-  border-color: #56C6A9;
+  border-color: var(--color-highlight);
   align-content: center;
   size: auto;
+
 }
 
 .add-goal-button{
   width: 64px;
   height: 64px;
   border-radius: 32px;
-  position: absolute;
+  position: fixed;
   left: calc(50vw - 32px);
   bottom: 64px;
   background-color: var(--color-highlight);
@@ -43,5 +98,62 @@ button {
 }
 
 
-.goal-done{background-color: green;}
-.goal-not-done{background-color: red;}
+
+
+.information{
+  height: 40vh;
+  min-height: 350px;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-bottom: 8px;
+  background: var(--color-primary);
+}
+
+.choose-prompt{
+  margin: 0;
+  margin-top: 16px;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.bonsai-logo{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-color: var(--colot-text-primary);
+  border: solid;
+  border-radius: 50%;
+  border-width: 4px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.choose-question{
+  text-transform: uppercase;
+  font-weight: lighter;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  text-align: left;
+  justify-self: left;
+  align-self: flex-end;
+  margin: 16px;
+}
+
+.delete-goal{
+  margin-right: 64px;
+  
+}

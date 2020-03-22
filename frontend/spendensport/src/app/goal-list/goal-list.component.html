@@ -1,21 +1,34 @@
+
 <app-title-bar titleHeader="Meine Ziele"></app-title-bar>
-<div class="main-container">
-  
-  <mat-card>
-      <mat-card-content>
-        <div *ngFor="let goal of goals" [ngClass] = "goal.done?'home-done':'home-not-done'">
-          <p class="set-goal-title">Goal: {{goal.description}}
-            <button
-          (click)="onComplete(goal)"
-          type="submit">Erledigt</button>
-          </p>
-          <p>Days to go: {{goal.daysLeft()}}</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-
-    <a routerLink="/goal" class="add-goal-button">
-      <i style="font-size: 50px;" class="material-icons">add</i>
-    </a>
+<div class="information">
+  <h3 class="choose-prompt">
+      Los geht's!
+  </h3>
+  <div class="bonsai-logo">
+    <app-logo-bonsai></app-logo-bonsai>
+  </div>
+  <p class="choose-question">
+      Offene Ziele
+  </p>
 </div>
+<div class="main-container">
+    <div class="card" *ngFor="let goal of goals">
+      <app-todo-checkbox [model]="goal.done" (modelChange)="goal.setDone($event)" [todoContent]="goal.description"></app-todo-checkbox>
+      <h4>noch {{goal.daysLeft()}} Tage</h4>
+      <hr style="max-width: 256px; width: 50%;">
+      <div class="alternative"> 
+        <h4>oder</h4>
+      </div>
+      <h2>{{goal.stake}} &euro; spenden</h2>
+      <button aria-label="lösche Ziel" (click)="deleteGoal(goal)" type="button" *ngIf="goal.done" class="delete-goal">
+        <i style="font-size: 32px;" class="material-icons">delete</i>
+      </button>
+    </div>
 
+
+</div>
+<mat-card-actions>
+  <a routerLink="/goal" class="add-goal-button">
+    <i style="font-size: 50px;" class="material-icons">add</i>
+  </a>
+</mat-card-actions>

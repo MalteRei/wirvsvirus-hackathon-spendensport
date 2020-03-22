@@ -1,10 +1,11 @@
 .content{
-    position: absolute;
-    width: 300px;
-    margin-left: calc(50vw - 150px);
-    height: 22px;
-    left: 24px;
-    top: 111px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
 
     /*font-family: Montserrat;
     font-style: normal;
@@ -15,6 +16,21 @@
 
     text-align: left;
     
+}
+
+.card{
+  grid-column: 2/3;
+  background-color: var(--color-primary);
+  min-width: 200px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 25px 35px 25px 35px;
+  text-align: left;
 }
 
 
@@ -39,7 +55,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     height: 100%;
-    background: var(--color-secondary);
+    background-color: none;
     margin-left: 16px;
   }
   
@@ -100,7 +116,7 @@
     border-radius: 4px;
     height: 4px;
     width: 20px;
-    background: var(--color-highlight);
+    background: var(--gradient);
     position: absolute;
     right: -4px;      
     -webkit-transition: all 0.3s;      
@@ -170,3 +186,15 @@
   ::ng-deep.mat-calendar-body-disabled > ::ng-deep.mat-calendar-body-cell-content:not(.mat-calendar-body-selected){
     color: var(--color-text-secondary)!important;
   }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .form-container h2{
+    margin-bottom: 0;
+  }
+  

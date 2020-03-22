@@ -8,11 +8,16 @@
 
 :root {
 /*color-highlight is the brand color. It can be used to emphasize certain elements.*/
---color-highlight: #56C6A9;
+--color-highlight: #84DD90/*#56C6A9*/;
+
+/*muted highlight color*/
+--color-muted: #CDEF7F;
+
+--gradient: linear-gradient(var(--color-highlight), var(--color-muted));
 /*color-primary is used on elements in the foreground the language learner can interact with. For example the background color of a card.*/
 --color-primary: #ffffff;
 /*color-secondary is used for elements in the background. For example the color behind the cards.*/
---color-secondary: #F3F2F1;
+--color-secondary: ##FFFDFB;
 /*color-tertiary and color-quaternary can be used as a muted accent on top of color-primary and color-secondary.*/
 --color-tertiary: #D2D0CE;
 --color-quaternary: #A19F9D;
@@ -22,16 +27,18 @@
 --color-primary-transparent: rgba(255, 255, 255, 0.9);
 --color-secondary-transparent: rgba(243, 242, 241, 0.8);
 /*color-text-primary is the color used for most of the textual information to display to the language learner.*/
---color-text-primary: #000000;
+--color-text-primary: #232B2B;
 /*color-text-secondary is used on the text elements that are not as important as other text and thus should not be the focus.*/
 --color-text-secondary: #3B3A39;
---font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI Webfont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif';
+--font-family: 'Montserrat';
 }
-
+/*
 @media (prefers-color-scheme: dark) {
-/*Define css variables in dark mode.*/
+/*Define css variables in dark mode.*//*
     :root {
-    --color-highlight: #008890;
+    --color-highlight: #84DD90;
+    --color-muted: #CDEF7F;
+    --gradient: linear-gradient(var(--color-highlight), var(--color-muted));
     --color-primary: #1B1A19;
     --color-secondary: #252423;
     --color-tertiary: #3B3A39;
@@ -42,9 +49,9 @@
     --color-secondary-transparent: rgba(37, 36, 35, 0.8);
     --color-text-primary: #f3f2f1;
     --color-text-secondary: #C8C6C4;
-    --font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI Webfont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif';
+    --font-family: 'Montserrat';
 }
-}
+}*/
 
 /*
 *Add this class if the background should be visible but blured.
@@ -55,9 +62,8 @@
 
 @supports (backdrop-filter: blur(20px) saturate(125%)) or (-webkit-backdrop-filter: blur(20px) saturate(125%)) {
     .blur {
-        -webkit-backdrop-filter: blur(20px) saturate(125%);
-        backdrop-filter: blur(20px) saturate(125%);
-        background-color: var(--color-acrylic);
+        background-color: white;
+        border-bottom: 1px solid #e7e7e7;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
@@ -115,6 +121,7 @@ h1 {
     font-size: 2.625em;
     line-height: 3.25em;
     margin: 0;
+  align-self: center;
 }
 
 h2 {
@@ -131,6 +138,7 @@ h3 {
     font-size: 1.75em;
     line-height: 2.25em;
     margin: 0;
+    font-weight: 600;
 }
 
 h4 {
@@ -230,6 +238,11 @@ button:active {
     border: inherit;
 }
 
+button:hover {
+  border: 2px;
+  border-color: var(--color-highlight);
+}
+
 button:focus {
     outline: none;
 
@@ -265,15 +278,15 @@ button:focus {
     margin-left: 32px;
     margin-right: 32px;
   }
-  
+
   .input-container {
     margin-bottom: 16px;
     margin-top: 16px;
     min-width: 20vw;
   }
-  
-  
-  
+
+
+
   .input-box {
     border: none;
     border-width: medium;
@@ -295,402 +308,86 @@ button:focus {
   }
 
 
-  
-.text-field {
-    height: 112px;
-  }
-  
-  
-  
-  .input-box::after, .input-box::before {
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+
+/*loading animation*/
+
+.ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 11px;
+  margin: 0;
+  padding: 0;
+}
+
+  .ellipsis div {
     position: absolute;
+    top: 0;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
-    opacity: 0;
-    pointer-events: none;
-    content: "";
-  }
-  
-  .input-box::before {
-    -webkit-transition: all 15ms linear;
-    -o-transition: all 15ms linear;
-    transition: all 15ms linear;
-    z-index: 1001;
-  }
-  
-  
-  textarea {
-    display: -ms-flexbox;
-    display: flex;
-    padding: 12px 16px 14px;
-    border: none !important;
-    border-width: medium !important;
-    border-style: none !important;
-    border-color: rgba(255,0,0,1) !important;
-    background-color: transparent;
-    z-index: 1001;
-    font-size: 1em;
-    line-height: 1.75rem;
-    font-weight: 400;
-    letter-spacing: 0em;
-    text-decoration: inherit;
-    text-transform: inherit;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    width: 100%;
-    height: 80%;
-    padding: 20px 16px 6px;
-    -webkit-transition: all .15s cubic-bezier(.4,0,.2,1);
-    -o-transition: all .15s cubic-bezier(.4,0,.2,1);
-    transition: all .15s cubic-bezier(.4,0,.2,1);
-    border-bottom: 1px solid;
-    border-radius: 4px;
-    background: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    will-change: transform, opacity, color;
-    background-color: transparent;
-    color: var(--color-text-primary);
-  }
-  
-    textarea::before {
-      -o-transition: opacity 15ms linear, background-color 15ms linear;
-      transition: opacity 15ms linear, background-color 15ms linear;;
-    }
-  
-    textarea::before, input::after {
-      pointer-events: none;
-    }
-  
-  
-    textarea:hover ~ .outline {
-      color: var(--color-text-primary);
-    }
-  
-    textarea:focus ~ .outline {
-      color: var(--color-text-primary);
-    }
-  
-      textarea:focus ~ .outline > .outline-left {
-        border-top: 2px solid;
-        border-bottom: 2px solid;
-        border-left: 2px solid;
-      }
-  
-      textarea:focus ~ .outline > .outline-right {
-        border-top: 2px solid;
-        border-bottom: 2px solid;
-        border-right: 2px solid;
-      }
-  
-      textarea:focus ~ .outline > .outline-middle {
-        border-top: 2px solid;
-        border-bottom: 2px solid;
-      }
-  
-    textarea:hover ~ .outline > .outline-middle > .floating-label {
-      color: var(--color-text-primary);
-    }
-  
-    textarea.ng-pristine.ng-untouched.ng-invalid:not(:focus) ~ .outline > .outline-middle > .floating-label {
-      color: var(--color-text-secondary);
-      top: 15px;
-      font-size: 1em;
-    }
-  
-    textarea.ng-pristine.ng-untouched.ng-invalid:not(:focus):not(:hover) ~ .outline {
-      color: var(--color-text-secondary);
-    }
-   
-  
-    textarea.ng-invalid[email].ng-dirty:not(:focus) ~ .outline > .outline-middle > .floating-label, textarea.ng-invalid.email.ng-dirty:not(:focus) ~ .outline > .outline-middle > .floating-label {
-      color: #a94442;
-      visibility: hidden;
-    }
-  
-    textarea:focus ~ .outline > .outline-middle > .floating-label {
-      color: var(--color-text-primary);
-      top: -12px;
-      font-size: 0.8em;
-    }
-  
-    textarea.ng-valid[required] ~ .outline > .outline-middle > .floating-label, textarea.ng-valid.required ~ .outline > .outline-middle > .floating-label {
-      color: #42A948;
-      top: -12px;
-      font-size: 0.8em;
-    }
-  
-    textarea.ng-valid[required] ~ .outline, textarea.ng-valid.required ~ .outline {
-      color: #42A948;
-    }
-  
-  
-  input {
-    display: -ms-flexbox;
-    display: flex;
-    padding: 12px 16px 14px;
-    border: none !important;
-    border-width: medium !important;
-    border-style: none !important;
-    border-color: rgba(255,0,0,1) !important;
-    background-color: transparent;
-    z-index: 1001;
-    font-size: 1em;
-    line-height: 1.75rem;
-    font-weight: 400;
-    letter-spacing: 0em;
-    text-decoration: inherit;
-    text-transform: inherit;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    width: 100%;
-    height: 100%;
-    padding: 20px 16px 6px;
-    -webkit-transition: all .15s cubic-bezier(.4,0,.2,1);
-    -o-transition: all .15s cubic-bezier(.4,0,.2,1);
-    transition: all .15s cubic-bezier(.4,0,.2,1);
-    border-bottom: 1px solid;
-    border-radius: 4px;
-    background: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -o-appearance: none;
-    -ms-appearance: none;
-    outline: none;
-    will-change: transform, opacity, color;
-    background-color: transparent;
-    color: var(--color-text-primary);
-  }
-  
-    input::before {
-      -o-transition: opacity 15ms linear, background-color 15ms linear;
-      transition: opacity 15ms linear, background-color 15ms linear;;
-    }
-  
-    input::before, input::after {
-      pointer-events: none;
-    }
-  
-   
-    input:hover ~ .outline {
-      color: var(--color-text-primary);
-    }
-  
-    input:focus ~ .outline {
-      color: var(--color-text-primary);
-    }
-  
-      input:focus ~ .outline > .outline-left {
-        border-top: 2px solid;
-        border-bottom: 2px solid;
-        border-left: 2px solid;
-      }
-  
-      input:focus ~ .outline > .outline-right {
-        border-top: 2px solid;
-        border-bottom: 2px solid;
-        border-right: 2px solid;
-      }
-  
-      input:focus ~ .outline > .outline-middle {
-        border-top: 2px solid;
-        border-bottom: 2px solid;
-      }
-  
-    input:hover ~ .outline > .outline-middle > .floating-label {
-      color: var(--color-text-primary);
-    }
-  
-    input.ng-pristine.ng-untouched.ng-invalid:not(:focus) ~ .outline > .outline-middle > .floating-label {
-      color: var(--color-text-secondary);
-      top: 15px;
-      font-size: 1em;
-    }
-  
-    input.ng-pristine.ng-untouched.ng-invalid:not(:focus):not(:hover) ~ .outline {
-      color: var(--color-text-secondary);
-    }
-  
-    input.ng-invalid[email].ng-dirty:not(:focus) ~ .outline > .outline-middle > .floating-label, input.ng-invalid.email.ng-dirty:not(:focus) ~ .outline > .outline-middle > .floating-label {
-      color: #a94442;
-      visibility: hidden;
-    }
-  
-    input.ng-invalid[min].ng-dirty:not(:focus) ~ .outline > .outline-middle > .floating-label, input.ng-invalid.min.ng-dirty:not(:focus) ~ .outline > .outline-middle > .floating-label {
-      color: #a94442;
-      visibility: hidden;
-    }
-  
-    input:focus ~ .outline > .outline-middle > .floating-label {
-      color: var(--color-text-primary);
-      top: -12px;
-      font-size: 0.8em;
-    }
-  
-    input.ng-valid[required] ~ .outline > .outline-middle > .floating-label, input.ng-valid.required ~ .outline > .outline-middle > .floating-label {
-      color: #42A948;
-      top: -12px;
-      font-size: 0.8em;
-    }
-  
-    input.ng-valid[required] ~ .outline, input.ng-valid.required ~ .outline {
-      color: #42A948;
-    }
-  
-   
-  
-  input::-ms-clear {
-    display: none;
+    background: var(--color-text-primary);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
 
+  .loading-block{
+    width: 100vw;
+    padding-left: calc(50vw - 5.5px);
+    margin-right: 0;
+    margin-top: 64px;
+  }
 
-  .outline {
-    border-radius: 4px;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    right: 0px;
-    left: 0px;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    text-align: left;
-    pointer-events: none;
-    will-change: transform, opacity, color;
-    border-color: none;
-    color: #a94442;
-    background-color: transparent;
-  }
-  
-  
-    .outline::before {
-      -o-transition: opacity 15ms linear, background-color 15ms linear;
-      transition: opacity 15ms linear, background-color 15ms linear;;
+    .ellipsis div:nth-child(1) {
+      left: 6px;
+      animation: ellipsis1 0.6s infinite;
     }
-  
-    .outline::before, input::after {
-      pointer-events: none;
+
+    .ellipsis div:nth-child(2) {
+      left: 6px;
+      animation: ellipsis2 0.6s infinite;
     }
-  
-  .outline-left {
-    border-radius: 4px 0 0 4px;
-    border-color: green;
-    border-left: 1px solid;
-    border-right: none;
-    width: 12px;
-    height: 100%;
-    -o-transition: all .15s cubic-bezier(.4,0,.2,1);
-    -webkit-transition: all .15s cubic-bezier(.4,0,.2,1);
-    transition: all .15s cubic-bezier(.4,0,.2,1);
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    pointer-events: none;
-    display: -ms-flexbox;
-    text-align: left;
-    display: flex;
-    will-change: transform, opacity, color;
-    z-index: 2000;
+
+    .ellipsis div:nth-child(3) {
+      left: 26px;
+      animation: ellipsis2 0.6s infinite;
+    }
+
+    .ellipsis div:nth-child(4) {
+      left: 45px;
+      animation: ellipsis3 0.6s infinite;
+    }
+
+@keyframes ellipsis1 {
+  0% {
+    transform: scale(0);
   }
-  
-  .outline-middle {
-    border-color: green;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: auto;
-    max-width: calc(-24px + 100%);
-    height: 100%;
-    -o-transition: all .15s cubic-bezier(.4,0,.2,1);
-    -webkit-transition: all .15s cubic-bezier(.4,0,.2,1);
-    transition: all .15s cubic-bezier(.4,0,.2,1);
-    border-bottom: 1px solid;
-    border-top: 1px solid;
-    pointer-events: none;
-    text-align: left;
-    will-change: transform, opacity, color;
-    z-index: 2000;
+
+  100% {
+    transform: scale(1);
   }
-  
-  .floating-label {
-    color: #a94442;
-    display: inline-block;
-    position: relative;
-    top: 15px;
-    bottom: auto;
-    max-width: 100%;
-    left: 4px;
-    right: auto;
-    top: 17px;
-    pointer-events: none;
-    font-size: 1em;
-    line-height: 1.75rem;
-    font-weight: 400;
-    letter-spacing: 0em;
-    text-decoration: inherit;
-    text-transform: inherit;
-    -webkit-transform-origin: left top 0px;
-    -ms-transform-origin: left top;
-    transform-origin: left top 0px;
-    -webkit-transition: all .15s cubic-bezier(.4,0,.2,1);
-    -o-transition: all .15s cubic-bezier(.4,0,.2,1);
-    transition: all .15s cubic-bezier(.4,0,.2,1);
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: text;
-    overflow: hidden;
-    will-change: transform;
-    background-color: var(--color-secondary);
-    z-index: 199;
-    padding-right: 5px;
-    padding-left: 2px;
+}
+
+@keyframes ellipsis3 {
+  0% {
+    transform: scale(1);
   }
-  
-  
-  
-  .outline-right {
-    border-radius: 0 4px 4px 0;
-    flex-grow: 1;
-    border-left: none;
-    border-right: 1px solid;
-    height: 100%;
-    -o-transition: all .15s cubic-bezier(.4,0,.2,1);
-    -webkit-transition: all .15s cubic-bezier(.4,0,.2,1);
-    transition: all .15s cubic-bezier(.4,0,.2,1);
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    pointer-events: none;
-    will-change: opacity, transform, color;
-    display: -ms-flexbox;
-    display: flex;
-    z-index: 2000;
+
+  100% {
+    transform: scale(0);
   }
-  
-  .input-hint {
-    padding-right: 16px;
-    padding-left: 16px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+}
+
+@keyframes ellipsis2 {
+  0% {
+    transform: translate(0, 0);
   }
-  
-  .hint-text {
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    display: block;
-    line-height: normal;
-    margin: 0;
-    -o-transition: all .15s cubic-bezier(.4,0,.2,1);
-    -webkit-transition: all .15s cubic-bezier(.4,0,.2,1);
-    transition: all .15s cubic-bezier(.4,0,.2,1);
+
+  100% {
+    transform: translate(19px, 0);
   }
-  
-  .hint-required {
-    color: #a94442;
-  }
-  
+}
+
+.card {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}

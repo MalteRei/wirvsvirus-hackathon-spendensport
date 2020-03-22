@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { GoalStoreService } from '../services/goal-store.service';
-import { IGoal } from '../models/IGoal';
+import {Component, OnInit} from '@angular/core';
+import {GoalStoreService} from '../services/goal-store.service';
+import {IGoal} from '../models/IGoal';
 
 @Component({
   selector: 'app-goal-list',
@@ -10,10 +10,11 @@ import { IGoal } from '../models/IGoal';
 export class GoalListComponent implements OnInit {
 
   public goals: Array<IGoal>;
+
   constructor(private goalStoreService: GoalStoreService) {
     this.goals = goalStoreService.goals;
     console.log('Goals:');
-    goalStoreService.goals.forEach(goal=>console.dir(goal));
+    goalStoreService.goals.forEach(goal => console.dir(goal));
   }
 
   ngOnInit(): void {
@@ -22,6 +23,17 @@ export class GoalListComponent implements OnInit {
   public onComplete(goal: IGoal) {
     goal.done = true;
   }
+
+  /*public daysLeft() {
+
+  }*/
+
+  public deleteGoal(goal: IGoal) {
+    this.goalStoreService.removeGoal(goal);
+  }
+
+
+ 
 
 
 }

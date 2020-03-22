@@ -13,12 +13,20 @@ export class Goal implements IGoal {
         this.Date = value;
     }
     private LinkUrlToDonate: string;
+    private LinkUrlGoal: string;
 
     public get linkUrlToDonate(): string {
         return this.LinkUrlToDonate;
     }
     public set linkUrlToDonate(value: string) {
         this.LinkUrlToDonate = value;
+    }
+
+    public get linkUrlGoal(): string {
+        return this.LinkUrlGoal;
+    }
+    public set linkUrlGoal(value: string) {
+        this.LinkUrlGoal = value;
     }
 
     public get done(): boolean {
@@ -41,19 +49,24 @@ export class Goal implements IGoal {
         this.Description = value;
     }
 
+    public setDone(value: boolean) {
+        this.done = value;
+    }
+
     public daysLeft(): number {
-        const currentDate = new Date();
-        const daysToGo = this.date.getDate() - currentDate.getDate();
-        return daysToGo;
+      const currentDate = new Date();
+      const daysToGo = this.date.getDate() - currentDate.getDate();
+      return daysToGo;
     }
 
 
 
-    constructor(description: string, stake: number, done: boolean, linkToDonateTo: string, date: Date) {
+    constructor(description: string, stake: number, done: boolean, linkToDonateTo: string, date: Date, linkToGoal: string) {
         this.Description = description;
         this.Stake = stake;
         this.Done = done;
         this.Date = date;
         this.LinkUrlToDonate = linkToDonateTo;
+        this.linkUrlGoal = linkToGoal;
     }
 }
