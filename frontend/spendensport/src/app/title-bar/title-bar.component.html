@@ -1,8 +1,8 @@
 <div class="title-background blur">
     <div *ngIf="backLinkName != undefined && backLinkUrl != undefined" class="back">
         <i style="color: var(--color-highlight);" class="material-icons">arrow_back_ios</i>
-        <a class="backLink"  [routerLink]="backLinkUrl">{{backLinkName}}</a>
+        <a role="navigation" class="backLink"  [routerLink]="backLinkUrl">{{backLinkName}}</a>
     </div>
     
-    <h1 class="title">{{titleHeader}}</h1>
+    <h1 role="heading" class="title">{{titleHeader}}</h1>
 </div>

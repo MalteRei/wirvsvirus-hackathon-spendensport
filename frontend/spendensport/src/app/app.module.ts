@@ -24,6 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -52,7 +54,8 @@ export const configFactory = (configService: ConfigService) => {
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {
