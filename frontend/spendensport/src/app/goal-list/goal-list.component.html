@@ -38,6 +38,14 @@
           </mat-checkbox>
         </div>
 
+        <div *ngIf="goal.done">
+          <button
+            (click)="deleteGoal(goal)"
+            type="submit">
+            Löschen
+          </button>
+        </div>
+
 
         <p>Days to go: {{goal.daysLeft()}}</p>
       </mat-card-content>
