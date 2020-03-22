@@ -1,0 +1,91 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$color-primary: (
+  50: #e1f5f0,
+  100: #b6e6d9,
+  200: #87d7c1,
+  300: #56c6a8,
+  400: #30b896,
+  500: #1faa85,
+  600: #1a9c78,
+  700: #168b69,
+  800: #107b5b,
+  900: #0b5e40,
+  A100: #b6e6d9,
+  A200: #56c6a8,
+  A400: #56c6a8,
+  A700: #0b5e40,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  )
+);
+
+$color-accent: (
+  50: #e3f7fc,
+  100: #bbebf8,
+  200: #92def2,
+  300: #70d0ea,
+  400: #60c6e2,
+  500: #5dbcda,
+  600: #56acc6,
+  700: #4d97ab ,
+  800: #468393,
+  900: #396067,
+  A100: #bbebf8,
+  A200: #60c6e2,
+  A400: #4d97ab,
+  A700: #002d85,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: white,
+    A700: white,
+  )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$color-app-highlight: mat-palette($color-primary);
+$color-app-accent:  mat-palette($color-accent, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($color-app-highlight, $color-app-accent, $candy-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);

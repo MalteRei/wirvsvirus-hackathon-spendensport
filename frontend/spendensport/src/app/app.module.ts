@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigService } from './services/config.service';
-import { GoalComponent } from './goal/goal.component';
+import { HomeComponent } from './home/home.component';
 
 import {FormsModule} from '@angular/forms';
 import { GoalListComponent } from './goal-list/goal-list.component';
@@ -17,6 +17,10 @@ import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatInputModule} from '@Angular/material/input';
+import { LogoBonsaiComponent } from './logo-bonsai/logo-bonsai.component';
+import { TitleBarComponent } from './title-bar/title-bar.component';
+import { MatIconModule } from '@angular/material/icon';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
@@ -29,10 +33,12 @@ export const configFactory = (configService: ConfigService) => {
 @NgModule({
   declarations: [
     AppComponent,
-    GoalComponent,
+    HomeComponent,
     GoalListComponent,
     DonationListComponent,
-    DonationTileComponent
+    DonationTileComponent,
+    LogoBonsaiComponent,
+    TitleBarComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,12 @@ export const configFactory = (configService: ConfigService) => {
     MatCardModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+<<<<<<< HEAD
     MatDatepickerModule,
+=======
+    MatInputModule,
+    MatIconModule
+>>>>>>> 337b46fa4fbf0805c57a0c0e37fa8a86de4dc88e
   ],
   providers: [
     {

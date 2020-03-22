@@ -12,6 +12,14 @@ export class Goal implements IGoal {
     public set date(value: Date) {
         this.Date = value;
     }
+    private LinkUrlToDonate: string;
+
+    public get linkUrlToDonate(): string {
+        return this.LinkUrlToDonate;
+    }
+    public set linkUrlToDonate(value: string) {
+        this.LinkUrlToDonate = value;
+    }
 
     public get done(): boolean {
         return this.Done;
@@ -35,10 +43,11 @@ export class Goal implements IGoal {
 
 
 
-    constructor(description: string, stake: number, done: boolean, date: Date) {
+    constructor(description: string, stake: number, done: boolean, linkToDonateTo: string, date: Date) {
         this.Description = description;
         this.Stake = stake;
         this.Done = done;
         this.Date = date;
+        this.LinkUrlToDonate = linkToDonateTo;
     }
 }

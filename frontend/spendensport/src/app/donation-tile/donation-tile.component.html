@@ -6,10 +6,11 @@
         by {{donation.carrier.name}} | {{donation.open_amount_in_cents / 100}} &euro; fehlen noch | {{donation.donor_count}} Menschen haben bereit gespendet
     </div>
     <div class="card_donation_container">
-        <a target="_blank" href="{{getLinkToDonate()}}" class="card_donate_button">
+        <button class="card_donate_button" type="submit" (click) = "chooseOrganization()">
             <img src="{{ 'https://www.google.com/s2/favicons?domain=' + getLinkToDonate() }}" alt="{{ donation.title }}" />
             <p class="card_donation_learn">spenden</p>
-        </a>
+        </button>            
+        
     </div>
     <p class="statistic_value" [ngStyle]="{ 'width.%': donation.progress_percentage }">
         {{ donation.progress_percentage }}%
