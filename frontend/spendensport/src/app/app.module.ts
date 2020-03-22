@@ -18,6 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+
 export const configFactory = (configService: ConfigService) => {
   return () => configService.loadConfig();
 };
@@ -39,6 +42,7 @@ export const configFactory = (configService: ConfigService) => {
     MatCardModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatDatepickerModule,
   ],
   providers: [
     {

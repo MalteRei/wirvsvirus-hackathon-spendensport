@@ -4,6 +4,14 @@ export class Goal implements IGoal {
     private Description: string;
     private Stake: number;
     private Done: boolean;
+    private Date: Date;
+
+    public get date(): Date {
+        return this.Date;
+    }
+    public set date(value: Date) {
+        this.Date = value;
+    }
 
     public get done(): boolean {
         return this.Done;
@@ -27,9 +35,10 @@ export class Goal implements IGoal {
 
 
 
-    constructor(description: string, stake: number, done: boolean ) {
+    constructor(description: string, stake: number, done: boolean, date: Date) {
         this.Description = description;
         this.Stake = stake;
         this.Done = done;
+        this.Date = date;
     }
 }
