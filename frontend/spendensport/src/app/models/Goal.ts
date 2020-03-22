@@ -41,6 +41,12 @@ export class Goal implements IGoal {
         this.Description = value;
     }
 
+    public daysLeft(): number {
+        var currentDate = new Date();
+        var daysToGo = this.date.getDate() - currentDate.getDate();
+        return daysToGo;
+    }
+
 
 
     constructor(description: string, stake: number, done: boolean, linkToDonateTo: string, date: Date) {
