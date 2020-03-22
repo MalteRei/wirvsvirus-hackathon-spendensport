@@ -1,0 +1,172 @@
+.content{
+    position: absolute;
+    width: 317px;
+    height: 22px;
+    left: 24px;
+    top: 111px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: left;
+
+    color: #5F6969;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    background: var(--color-secondary);
+    margin-left: 16px;
+  }
+  
+  .link-effect {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 24px;
+    position: relative;
+    padding: 10px 50px 10px 20px;
+  
+    -webkit-transition: all 0.3s;
+  
+    -o-transition: all 0.3s;
+  
+    transition: all 0.3s;
+  
+    -webkit-transform: scale(1);
+  
+        -ms-transform: scale(1);
+  
+            transform: scale(1); /*change scale(3) to scale(1)*/
+  }
+  
+  .link-effect .arrow {
+    background: var(--color-highlight);
+    width: 32px;
+    height: 4px;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    margin-top: -1px;
+    z-index: -1;
+    border-radius: 4px;
+  
+    -webkit-transition: all 0.3s;
+  
+    -o-transition: all 0.3s;
+  
+    transition: all 0.3s;
+  }
+  
+  .link-effect:hover {
+    padding-right: 20px;
+    color: #fff;
+  }
+  
+  .link-effect:hover .arrow {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  
+  .link-effect .arrow:before, .link-effect .arrow:after {
+    content: '';
+    border-radius: 4px;
+    height: 4px;
+    width: 20px;
+    background: var(--color-highlight);
+    position: absolute;
+    right: -4px;      
+    -webkit-transition: all 0.3s;      
+    -o-transition: all 0.3s;      
+    transition: all 0.3s;
+  }
+  
+  .link-effect .arrow:before {
+    bottom: 6px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .link-effect .arrow:after{
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  
+  .link-effect:hover .arrow:before,
+  .link-effect:hover .arrow:after{
+    right: 0;
+  }
+  
+  .link-effect:hover .arrow:before{
+    bottom: 12px;
+  }
+  
+  .link-effect:hover .arrow:after{
+    top: 12px;
+  }
+
+  ::ng-deep .mat-datepicker-content{
+    background-color: var(--color-primary);
+    color: var(--color-text-default);
+  }
+
+  ::ng-deep .mat-calendar-body-cell-content{
+    color: var(--color-text-default);
+  }
+
+
+  ::ng-deep .mat-datepicker-toggle, ::ng-deep .mat-datepicker-content .mat-calendar-next-button, ::ng-deep .mat-datepicker-content .mat-calendar-previous-button{
+    color: var(--color-text-default);
+
+  }
+
+  ::ng-deep .mat-calendar-body-label{
+    color: var(--color-text-default);
+
+  }
+
+  ::ng-deep .mat-calendar-table-header-divider::after{
+    background: var(--color-tertiary)!important;
+
+  }
+
+  ::ng-deep .mat-calendar-arrow{
+    border-top-color: var(--color-text-secondary)!important;
+  }
+
+  ::ng-deep .mat-calendar-body-disabled{
+    color: var(--color-text-secondary);
+  }
+
+  ::ng-deep.mat-calendar-body-disabled > ::ng-deep.mat-calendar-body-cell-content:not(.mat-calendar-body-selected){
+    color: var(--color-text-secondary)!important;
+  }
