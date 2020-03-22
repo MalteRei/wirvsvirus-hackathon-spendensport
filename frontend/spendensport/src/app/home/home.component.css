@@ -133,3 +133,32 @@
   .link-effect:hover .arrow:after{
     top: 12px;
   }
+
+  ::ng-deep .mat-datepicker-content{
+    background-color: var(--color-primary);
+    color: var(--color-text-default);
+  }
+
+  ::ng-deep .mat-calendar-body-cell-content{
+    color: var(--color-text-default);
+  }
+
+
+  ::ng-deep .mat-datepicker-toggle, ::ng-deep .mat-datepicker-content .mat-calendar-next-button, ::ng-deep .mat-datepicker-content .mat-calendar-previous-button{
+    color: var(--color-text-default);
+
+  }
+
+  ::ng-deep .mat-calendar-body-label{
+    color: var(--color-text-default);
+
+  }
+
+  ::ng-deep .mat-calendar-table-header-divider::after{
+    background: var(--color-tertiary)!important;
+
+  }
+
+  ::ng-deep .mat-calendar-arrow{
+    border-top-color: var(--color-text-secondary)!important;
+  }

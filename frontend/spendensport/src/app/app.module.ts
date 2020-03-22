@@ -50,7 +50,7 @@ export const configFactory = (configService: ConfigService) => {
     BrowserAnimationsModule,
     MatToolbarModule,
     MatDatepickerModule,
-    MatNativeDateModule, 
+    MatNativeDateModule,
     MatInputModule,
     MatIconModule
   ],
