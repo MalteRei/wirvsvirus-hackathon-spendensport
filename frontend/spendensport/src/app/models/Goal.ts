@@ -42,8 +42,8 @@ export class Goal implements IGoal {
     }
 
     public daysLeft(): number {
-        var currentDate = new Date();
-        var daysToGo = this.date.getDate() - currentDate.getDate();
+        const currentDate = new Date();
+        const daysToGo = this.date.getDate() - currentDate.getDate();
         return daysToGo;
     }
 
