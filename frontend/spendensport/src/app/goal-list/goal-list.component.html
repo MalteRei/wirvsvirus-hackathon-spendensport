@@ -31,9 +31,9 @@
           <button
             (click)="onComplete(goal)"
             type="submit">Erledigt
+            <mat-checkbox [(ngModel)]="goal.done">
+            </mat-checkbox>
           </button>
-          <mat-checkbox [(ngModel)]="goal.done">
-          </mat-checkbox>
         </div>
 
         <div *ngIf="goal.done">
