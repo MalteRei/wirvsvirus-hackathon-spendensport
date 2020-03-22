@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private goalCreationService: GoalCreationService) { }
 
+  minDate = new Date();
 
   ngOnInit(): void {
   }
