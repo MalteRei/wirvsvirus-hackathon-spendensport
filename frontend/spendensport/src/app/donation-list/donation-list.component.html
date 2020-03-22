@@ -10,8 +10,8 @@
         Wen möchtest du unterstützen?
     </p>
 </div>
-<div *ngFor="let donation of projectDonations.data">
-    <app-donation-tile [donation] = "donation"></app-donation-tile>
+<div role="listbox">
+    <app-donation-tile *ngFor="let donation of projectDonations.data" [donation] = "donation"></app-donation-tile>
 </div>
 
 </div>
