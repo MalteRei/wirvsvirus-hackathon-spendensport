@@ -44,3 +44,14 @@
     grid-column: 2/3;
     grid-row: 2/3;
 }
+
+.error-block{
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 64px;
+    display: flex;
+    flex-direction: row;
+}
