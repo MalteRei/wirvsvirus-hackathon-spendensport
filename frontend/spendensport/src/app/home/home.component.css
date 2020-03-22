@@ -1,20 +1,20 @@
 .content{
     position: absolute;
-    width: 317px;
+    width: 300px;
+    margin-left: calc(50vw - 150px);
     height: 22px;
     left: 24px;
     top: 111px;
 
-    font-family: Montserrat;
+    /*font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 18px;*/
     line-height: 22px;
     /* identical to box height */
 
     text-align: left;
-
-    color: #5F6969;
+    
 }
 
 

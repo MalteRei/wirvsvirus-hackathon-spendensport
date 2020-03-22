@@ -7,7 +7,7 @@
     <div style="max-width: 86.953125%;" class="input-row">
         <h2>Ich möchte bis:</h2> 
         <mat-form-field>
-          <mat-label>Choose a date</mat-label>
+          <mat-label>Datum</mat-label>
           <input matInput [matDatepicker]="picker" 
           [(ngModel)] = 'currentGoal.date' 
           [min]="minDate"
@@ -17,7 +17,6 @@
         </mat-form-field>
         <h2>Folgendes Ziel erreichen:</h2>
         <mat-form-field color= "red">
-          <mat-label>Ziel</mat-label>
           <textarea aria-label="mein Ziel"
                     name="goal-description"
                     #description="ngModel"
