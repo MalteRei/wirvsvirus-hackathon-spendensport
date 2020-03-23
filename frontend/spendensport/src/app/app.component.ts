@@ -7,7 +7,7 @@ import { GoalStoreService } from './services/goal-store.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'spendensport';
+  title = 'GoBonsai';
 }
 
 
