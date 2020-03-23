@@ -25,16 +25,17 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .back{
     color: var(--color-highlight);
     left: 32px;
     width: 10vw;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    justify-items: center;
+    
     position: absolute;
 }
