@@ -155,5 +155,13 @@ button {
 
 .delete-goal{
   margin-right: 64px;
-  
+}
+
+.card-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
 }
