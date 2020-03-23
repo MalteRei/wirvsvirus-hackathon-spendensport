@@ -32,9 +32,9 @@
 --color-text-secondary: #3B3A39;
 --font-family: 'Montserrat';
 }
-/*
+
 @media (prefers-color-scheme: dark) {
-/*Define css variables in dark mode.*//*
+/*Define css variables in dark mode.*/
     :root {
     --color-highlight: #84DD90;
     --color-muted: #CDEF7F;
@@ -51,7 +51,7 @@
     --color-text-secondary: #C8C6C4;
     --font-family: 'Montserrat';
 }
-}*/
+}
 
 /*
 *Add this class if the background should be visible but blured.
