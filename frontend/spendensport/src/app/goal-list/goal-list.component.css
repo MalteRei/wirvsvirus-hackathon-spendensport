@@ -43,8 +43,9 @@ mat-card-content {
   display: block;
   margin: 0;
   display: grid;
-  gap: 15px 0;
+  gap: 64px 0;
   padding: 15px;
+  padding-bottom: 256px;
   grid-template-columns: 25vw 50vw 25vw;
   width: 100vw;
 }
@@ -65,8 +66,7 @@ mat-card-header {
   justify-content: center;
 }
 
-.menu-container {
-}
+
 
 .mat-card-container {
   display: flex;

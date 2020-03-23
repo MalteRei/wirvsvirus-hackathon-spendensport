@@ -13,8 +13,6 @@ export class GoalListComponent implements OnInit {
 
   constructor(private goalStoreService: GoalStoreService) {
     this.goals = goalStoreService.goals;
-    console.log('Goals:');
-    goalStoreService.goals.forEach(goal => console.dir(goal));
   }
 
   ngOnInit(): void {
