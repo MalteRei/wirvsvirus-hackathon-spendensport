@@ -8,11 +8,16 @@ So können auch neue Arten von Challenges (z.B. Mental Health Übungen, Kreative
 Entstanden ist die App während des #WirVsVirus Hackathon vom 20.03-22.03.2020, initiiert durch die Bundesregierung, Tech4Germany, Code for Germany, Initiative D21, Impact Hub Berlin, ProjectTogether, Prototype Fund und SEND e.V. 
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+## Running the project locally
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Make sure you have [node.js](https://nodejs.org/en/download/) installed
+2. Open a terminal
+3. `npm install -g @angular/cli`
+4. `git clone https://github.com/MalteRei/wirvsvirus-hackathon-spendensport`
+5. `cd frontend/spendensport/`
+6. `npm install`
+7. run `ng serve` for a dev server
+8. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -33,3 +38,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
