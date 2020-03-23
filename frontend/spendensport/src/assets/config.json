@@ -1,3 +1,4 @@
 {
+    "apiUrl" : "https://localhost",
     "donationApiUrl": "https://api.betterplace.org/de/api_v4/"
 }
