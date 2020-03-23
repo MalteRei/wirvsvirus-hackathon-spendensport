@@ -23,7 +23,7 @@ export class DonationTileComponent implements OnInit {
 
   public chooseOrganization(): void {
     this.goalCreationService.goalToCreate.linkUrlToDonate = this.getLinkToDonate();
-    this.goalCreationService.goalToCreate.linkUrlGoal = this.donation.carrier.picture.links[0].href;
+    this.goalCreationService.goalToCreate.linkUrlToDonateImage = this.donation.carrier.picture.links[0].href;
     this.goalCreationService.submitGoal();
 
   }

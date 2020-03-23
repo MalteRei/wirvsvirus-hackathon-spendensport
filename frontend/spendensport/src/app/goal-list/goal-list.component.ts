@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {GoalStoreService} from '../services/goal-store.service';
-import {IGoal} from '../models/IGoal';
+import { Component, OnInit } from '@angular/core';
+import { GoalStoreService } from '../services/goal-store.service';
+import { IGoal } from '../models/IGoal';
 
 @Component({
   selector: 'app-goal-list',
@@ -25,4 +25,6 @@ export class GoalListComponent implements OnInit {
   public deleteGoal(goal: IGoal) {
     this.goalStoreService.removeGoal(goal);
   }
+
+
 }

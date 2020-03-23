@@ -19,7 +19,7 @@
       <div class="alternative"> 
         <h4>oder</h4>
       </div>
-      <h2>{{goal.stake}} &euro; spenden</h2>
+      <h2>{{goal.stake}} &euro; an</h2><img class="card-img" src="{{ goal.linkUrlToDonateImage }}" alt="Logo von Hilfsorganisation" />
       <button aria-label="lösche Ziel" (click)="deleteGoal(goal)" type="button" *ngIf="goal.done" class="delete-goal">
         <i style="font-size: 32px;" class="material-icons">delete</i>
       </button>
