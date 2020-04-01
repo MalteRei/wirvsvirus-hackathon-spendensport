@@ -1,6 +1,6 @@
 # How to contribute
 
-We are happy about contributions to our project, because we need volunteer developers to help bring this idea to life.
+We are happy about contributions to our project, because we need volunteer developers, artists or cooperation partners to help bring this idea to life.
 
 
 Here are some important resources:
@@ -9,6 +9,7 @@ Here are some important resources:
   * [explination video](https://youtu.be/y0UAtoeRgl8) shows in under 2 minutes what GoBonsai is all about, and
   * at [devpost project](https://devpost.com/software/spendenchallenge) you will find detailed information on where we are going.
 
+In case you have any questions feel free to write us an email to m@emzudemo.de
 
 ## Submitting changes
 
