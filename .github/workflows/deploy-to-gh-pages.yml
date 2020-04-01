@@ -37,7 +37,7 @@ jobs:
         cd frontend/spendensport
         ls
         npm install -g @angular/cli
-        npm intall
+        npm install
       
     - name: Code analysis 👀
       run: |
