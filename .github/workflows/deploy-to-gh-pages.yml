@@ -30,7 +30,8 @@ jobs:
       
     - name: Install Dependencies 📦
       run: |
-        cd frontend/spendensport
+        ls
+        #cd frontend/spendensport
         npm install -g @angular/cli
         npm intall
       
