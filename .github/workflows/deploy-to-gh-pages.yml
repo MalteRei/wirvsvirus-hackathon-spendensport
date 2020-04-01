@@ -41,12 +41,10 @@ jobs:
       
     - name: Code analysis 👀
       run: |
-        cd frontend/spendensport
         npx ng lint
         
     - name: Build 🔨
       run: |
-        cd frontend/spendensport
         npx ng build --prod --base-href "https://gobonsai.de/"
         
     - name: Deploy 🚀
@@ -54,4 +52,4 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: dist
+        FOLDER: frontend/dist
