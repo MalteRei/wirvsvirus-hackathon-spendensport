@@ -53,6 +53,7 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: frontend/spendensport/dist
+        FOLDER: frontend/spendensport/dist/spendensport/
         TARGET_FOLDER: .
         CLEAN_EXCLUDE: '[".github", "Concept and Architecture", "SocialMediaCampaign", "frontend", ".gitignore", "CNAME", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "LICENSE","README.md", "azure-pipelines.yml"]'
+        CLEAN: true
