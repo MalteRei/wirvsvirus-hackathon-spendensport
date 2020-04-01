@@ -7,7 +7,6 @@ die Kontrollschnittstelle (K), die die Challenge kontrolliert und bestätigt sow
 So können auch neue Arten von Challenges (z.B. Mental Health Übungen, Kreative Aufgaben, Haushalt) mit neuen Spendenmöglichkeiten (z.B. Blutspende, Zeit mit Oma, Abwasch für die ganze Familie) eingefügt werden.
 Entstanden ist die App während des #WirVsVirus Hackathon vom 20.03-22.03.2020, initiiert durch die Bundesregierung, Tech4Germany, Code for Germany, Initiative D21, Impact Hub Berlin, ProjectTogether, Prototype Fund und SEND e.V. 
 
-[![Build Status](https://dev.azure.com/Maltereimann/spendensport/_apis/build/status/MalteRei.wirvsvirus-hackathon-spendensport?branchName=master)](https://dev.azure.com/Maltereimann/spendensport/_build/latest?definitionId=22&branchName=master)
 
 ## Running the project locally
 
