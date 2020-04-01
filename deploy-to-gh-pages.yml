@@ -1,0 +1,39 @@
+
+
+name: Build Angular and deploy to GitHub pages
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+      
+    - name: Install Dependencies 📦
+      run: |
+        cd frontend/spendensport
+        npm install -g @angular/cli
+        npm intall
+      
+    - name: Code analysis 👀
+      run: |
+        cd frontend/spendensport
+        npx ng lint
+        
+    - name: Build 🔨
+      run: |
+        cd frontend/spendensport
+        npx ng build --prod --base-href "https://gobonsai.de/"
+        
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
