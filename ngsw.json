@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1585771472122,
+  "timestamp": 1585771883399,
   "index": "https://gobonsai.de/index.html",
   "assetGroups": [
     {
@@ -42,14 +42,14 @@
   "dataGroups": [],
   "hashTable": {
     "https://gobonsai.de/assets/config.json": "03696e1e3d5754e9c36f01b17d5091d1760ef2a5",
-    "https://gobonsai.de/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "https://gobonsai.de/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "https://gobonsai.de/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "https://gobonsai.de/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "https://gobonsai.de/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "https://gobonsai.de/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "https://gobonsai.de/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "https://gobonsai.de/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://gobonsai.de/assets/icons/icon-128x128.png": "cb566027a5ff58f48b5ab2a3339fa064d9a9d06c",
+    "https://gobonsai.de/assets/icons/icon-144x144.png": "3cd0aec84a5b2590ede097d7f747688c7497491a",
+    "https://gobonsai.de/assets/icons/icon-152x152.png": "0b5a2f3548ad54b5c1c707b5954a5e58ff24b126",
+    "https://gobonsai.de/assets/icons/icon-192x192.png": "93b78ce1195590889837519a52967c09ac6c6498",
+    "https://gobonsai.de/assets/icons/icon-384x384.png": "c4d580dc5e26b351b8a1ef502ccdbec34679cf0f",
+    "https://gobonsai.de/assets/icons/icon-512x512.png": "1b2e9ccef92c7ba0f10f2930d3ca9e2cb28ad2ee",
+    "https://gobonsai.de/assets/icons/icon-72x72.png": "cc2dfee7446fbda4d618928ed7aef27245fed823",
+    "https://gobonsai.de/assets/icons/icon-96x96.png": "e8dfa87117c64785d336bb2d8da8e2fe59ba08af",
     "https://gobonsai.de/favicon.ico": "13ed7700e2e26ece046035ff0f91589e247ccced",
     "https://gobonsai.de/index.html": "a1fee8693f97700fb4a64297a29f0e4d483e3ee5",
     "https://gobonsai.de/main-es2015.33ee65a65a4ff9fb98dd.js": "d2a6e9585fc1a4c9d058e9eb510c500c7fefb27f",
