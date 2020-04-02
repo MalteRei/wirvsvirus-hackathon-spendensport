@@ -9,7 +9,7 @@ Here are some important resources:
   * [explination video](https://youtu.be/y0UAtoeRgl8) shows in under 2 minutes what GoBonsai is all about, and
   * at [devpost project](https://devpost.com/software/spendenchallenge) you will find detailed information on where we are going.
 
-In case you have any questions feel free to write us an email to m@emzudemo.de
+In case you have any questions feel free to write us an email to team@gobonsai.org
 
 ## Submitting changes
 
