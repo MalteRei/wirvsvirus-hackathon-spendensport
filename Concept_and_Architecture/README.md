@@ -7,6 +7,8 @@ If you like to contribute to this solution feel free to start working on it or c
 
 ![Architecture and concept](architecture.jpeg "Architecture and concept")
 
+![Milestones](milestone.jpeg "Milestones and timeline")
+
 [YouTube video](https://youtu.be/y0UAtoeRgl8) feel free to 👍
 
 At the moment we have an Angular frontend and a lot of ideas to implement.
