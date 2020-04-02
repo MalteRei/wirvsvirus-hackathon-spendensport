@@ -14,3 +14,5 @@ At the moment we have an Angular frontend and a lot of ideas to implement. Pleas
 Please follow our [code of conduct](https://github.com/MalteRei/wirvsvirus-hackathon-spendensport/blob/master/CODE_OF_CONDUCT.md) 👨‍👩‍👧‍👦
 
 If you want to contribute feel free to contact us (we will be happy to add you as a contributor) or have a look at our [contribution guidline](https://github.com/MalteRei/wirvsvirus-hackathon-spendensport/blob/master/CONTRIBUTING.md) 👩🏼‍💻👨🏼‍💻
+
+In case you have any questions feel free to write us an email to m@emzudemo.de 
