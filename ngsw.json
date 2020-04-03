@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1585855717792,
+  "timestamp": 1585940958750,
   "index": "https://gobonsai.de/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://gobonsai.de/favicon.ico",
         "https://gobonsai.de/index.html",
-        "https://gobonsai.de/main-es2015.33ee65a65a4ff9fb98dd.js",
-        "https://gobonsai.de/main-es5.33ee65a65a4ff9fb98dd.js",
+        "https://gobonsai.de/main-es2015.2af0b8c4da24bf78fa76.js",
+        "https://gobonsai.de/main-es5.2af0b8c4da24bf78fa76.js",
         "https://gobonsai.de/manifest.webmanifest",
         "https://gobonsai.de/polyfills-es2015.3fd94ed6a324eee92aec.js",
         "https://gobonsai.de/polyfills-es5.c219b7059a7feb126472.js",
@@ -51,10 +51,10 @@
     "https://gobonsai.de/assets/icons/icon-72x72.png": "cc2dfee7446fbda4d618928ed7aef27245fed823",
     "https://gobonsai.de/assets/icons/icon-96x96.png": "e8dfa87117c64785d336bb2d8da8e2fe59ba08af",
     "https://gobonsai.de/favicon.ico": "13ed7700e2e26ece046035ff0f91589e247ccced",
-    "https://gobonsai.de/index.html": "a1fee8693f97700fb4a64297a29f0e4d483e3ee5",
-    "https://gobonsai.de/main-es2015.33ee65a65a4ff9fb98dd.js": "d2a6e9585fc1a4c9d058e9eb510c500c7fefb27f",
-    "https://gobonsai.de/main-es5.33ee65a65a4ff9fb98dd.js": "a39ab5c8463dd845c99e42c8a787c75e1fde2f38",
-    "https://gobonsai.de/manifest.webmanifest": "c79317848aa0e868425de6ec9ea999c3f28f5342",
+    "https://gobonsai.de/index.html": "a46dad64c34146fc3dcae9af91cefc93f9660c50",
+    "https://gobonsai.de/main-es2015.2af0b8c4da24bf78fa76.js": "f895cacec20a2ccebb20a98df2264bc4a90be240",
+    "https://gobonsai.de/main-es5.2af0b8c4da24bf78fa76.js": "6e4bda4332c4486183d671fcc6c2cb5d7a7268d4",
+    "https://gobonsai.de/manifest.webmanifest": "204cbec19c9a5c69deae3942c842ec66cf0b31f2",
     "https://gobonsai.de/polyfills-es2015.3fd94ed6a324eee92aec.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "https://gobonsai.de/polyfills-es5.c219b7059a7feb126472.js": "e5472003c8575a8fca7583648df3905038faeb18",
     "https://gobonsai.de/runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
