@@ -32,6 +32,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { TodoCheckboxComponent } from './todo-checkbox/todo-checkbox.component';
 import { ButtonComponent } from './button/button.component';
 import { LogoBonsaiLoveComponent } from './logo-bonsai-love/logo-bonsai-love.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -50,7 +51,8 @@ export const configFactory = (configService: ConfigService) => {
     TitleBarComponent,
     TodoCheckboxComponent,
     ButtonComponent,
-    LogoBonsaiLoveComponent
+    LogoBonsaiLoveComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

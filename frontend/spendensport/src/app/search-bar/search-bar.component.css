@@ -1,0 +1,5 @@
+
+
+input::-ms-clear { display: none; }
+
+input::-moz-clear { display: none; }
