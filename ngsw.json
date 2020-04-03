@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1585941430397,
+  "timestamp": 1585942585254,
   "index": "https://gobonsai.de/index.html",
   "assetGroups": [
     {
@@ -51,7 +51,7 @@
     "https://gobonsai.de/assets/icons/icon-72x72.png": "cc2dfee7446fbda4d618928ed7aef27245fed823",
     "https://gobonsai.de/assets/icons/icon-96x96.png": "e8dfa87117c64785d336bb2d8da8e2fe59ba08af",
     "https://gobonsai.de/favicon.ico": "13ed7700e2e26ece046035ff0f91589e247ccced",
-    "https://gobonsai.de/index.html": "49ccf61e1407b48ffc59b67c5c07e0c51379f174",
+    "https://gobonsai.de/index.html": "429aaee7b01f7ec80cf880dc99c274cdf38ba605",
     "https://gobonsai.de/main-es2015.2af0b8c4da24bf78fa76.js": "f895cacec20a2ccebb20a98df2264bc4a90be240",
     "https://gobonsai.de/main-es5.2af0b8c4da24bf78fa76.js": "6e4bda4332c4486183d671fcc6c2cb5d7a7268d4",
     "https://gobonsai.de/manifest.webmanifest": "64d58fac1dd04ee7d61d5d2c5e1704c5669f3629",
