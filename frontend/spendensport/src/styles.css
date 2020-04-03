@@ -14,10 +14,10 @@
 --color-muted: #CDEF7F;
 
 --gradient: linear-gradient(var(--color-highlight), var(--color-muted));
-/*color-primary is used on elements in the foreground the language learner can interact with. For example the background color of a card.*/
+/*color-primary is used on elements in the foreground the user can interact with. For example the background color of a card.*/
 --color-primary: #ffffff;
 /*color-secondary is used for elements in the background. For example the color behind the cards.*/
---color-secondary: ##FFFDFB;
+--color-secondary: #FFFDFB;
 /*color-tertiary and color-quaternary can be used as a muted accent on top of color-primary and color-secondary.*/
 --color-tertiary: #D2D0CE;
 --color-quaternary: #A19F9D;
@@ -26,7 +26,7 @@
 --color-acrylic: rgba(255,255,255,0.3);
 --color-primary-transparent: rgba(255, 255, 255, 0.9);
 --color-secondary-transparent: rgba(243, 242, 241, 0.8);
-/*color-text-primary is the color used for most of the textual information to display to the language learner.*/
+/*color-text-primary is the color used for most of the textual information to display.*/
 --color-text-primary: #232B2B;
 /*color-text-secondary is used on the text elements that are not as important as other text and thus should not be the focus.*/
 --color-text-secondary: #3B3A39;
