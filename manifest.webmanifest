@@ -1,8 +1,8 @@
 {
   "name": "GoBonsai",
   "short_name": "GoBonsai",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#84DD90",
+  "background_color": "#C8C6C4",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
