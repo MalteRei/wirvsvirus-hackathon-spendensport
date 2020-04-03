@@ -27,7 +27,7 @@ export class BetterplaceSearchService implements OnDestroy, ISearchProvider<IDon
     this.http
     .get<IBetterplaceResponseProjects>(
       this.configServices.config.donationApiUrl
-      + 'projects.json?around=Germany&facets=completed%3Afalse|closed%3Afalse|prohibit_donations%3Afalse&order=rank%3ADESC&q='+query)
+      + 'projects.json?facets=completed%3Afalse|closed%3Afalse|prohibit_donations%3Afalse&order=score%3Adesc|completed%3Aasc|rank%3Adesc|last_donation_at%3Adesc&q='+query)
       .pipe(retry(3))
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((searchResult: IBetterplaceResponseProjects) => {

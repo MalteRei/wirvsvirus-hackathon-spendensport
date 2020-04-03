@@ -19,8 +19,6 @@ export class SearchBarComponent implements OnInit {
   }
 
   public donationSearch(event: KeyboardEvent) {
-    console.log('donation search');
-    console.dir((event.target as HTMLInputElement).value);
     if ((event.target as HTMLInputElement).value.length > 3) {
       if((event.target as HTMLInputElement).value !== this.previousSearchTerm && event.key !== 'Enter') {
         this.SearchProvider.search((event.target as HTMLInputElement).value);
