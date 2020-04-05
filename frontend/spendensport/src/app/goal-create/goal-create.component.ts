@@ -23,11 +23,19 @@ export class GoalCreateComponent implements OnInit {
 
   constructor(private goalCreationService: GoalCreationService) { }
 
-  private static MinDate = new Date();
+  private static readonly MinDate = new Date();
 
 
   public get minDate(): Date {
     return GoalCreateComponent.MinDate;
+  }
+
+  public minDateString(): string{
+    const minDate = this.minDate;
+    const stringDate = minDate.getFullYear() + '-' + minDate.getUTCMonth() + '-' + minDate.getDate();
+    console.log(stringDate);
+    return stringDate;
+
   }
 
   public isMobile(): boolean {

@@ -8,7 +8,7 @@
   <div style="max-width: 100%" class="input-row">
   <div class="form-container">
       <h2>Ich möchte:</h2>
-      <mat-form-field color= "red">
+     <!-- <mat-form-field color= "red">
         <textarea aria-label="mein Ziel"
                   name="goal-description"
                   #description="ngModel"
@@ -20,12 +20,17 @@
                   cdkAutosizeMinRows="1"
                   cdkAutosizeMaxRows="5">
         </textarea>
-      </mat-form-field>
+      </mat-form-field>-->
+      <input #description="ngModel"
+                id="goal-description"
+                name="goal-description"
+                aria-label="mein Ziel"
+                [(ngModel)]="currentGoal.description">
     </div>
     
     <div class="form-container">
       <h2>bis zum:</h2>
-      <mat-form-field>
+     <!-- <mat-form-field>
         <mat-label>Datum</mat-label>
         <input matInput [matDatepicker]="picker"
         [(ngModel)] = 'currentGoal.date'
@@ -34,7 +39,12 @@
         readonly>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker [touchUi]="isMobile()" #picker></mat-datepicker>
-      </mat-form-field>
+      </mat-form-field>-->
+      <input  [min]="minDateString()"
+              name="goal-date"
+              [(ngModel)] = 'currentGoal.date'
+              type="date">
+
     </div>
     <h2>erreichen.</h2>
 
