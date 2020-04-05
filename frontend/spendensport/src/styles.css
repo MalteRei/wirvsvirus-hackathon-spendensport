@@ -192,6 +192,23 @@ a {
     font-size: 1em;
     line-height: 1.375em;
     font-family: var(--font-family);
+
+  background-color: none;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border: 2px solid var(--color-text-primary);
+}
+
+a:hover{
+  cursor: pointer;
+  border: 2px solid var(--color-text-primary);
+  background-color: var(--color-highlight);
+  color: var(--color-text-primary);
 }
 
 i {
@@ -203,6 +220,24 @@ i {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+button{
+  background-color: none;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border: 2px solid var(--color-text-primary);
+}
+
+button:hover{
+  cursor: pointer;
+  border: 2px solid var(--color-text-primary);
+  background-color: var(--color-highlight);
+  color: var(--color-text-primary);
+}
 
 button {
     -webkit-appearance: none;
@@ -238,10 +273,6 @@ button:active {
     border: inherit;
 }
 
-button:hover {
-  border: 2px;
-  border-color: var(--color-highlight);
-}
 
 button:focus {
     outline: none;
