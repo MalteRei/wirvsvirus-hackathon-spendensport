@@ -7,11 +7,11 @@ import { GoalCreationService } from '../services/goal-creation.service';
 
 
 @Component({
-  selector: 'app-goal',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-goal-create',
+  templateUrl: './goal-create.component.html',
+  styleUrls: ['./goal-create.component.css']
 })
-export class HomeComponent implements OnInit {
+export class GoalCreateComponent implements OnInit {
 
 
   public get currentGoal(): IGoal {
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
 
   public get minDate(): Date {
-    return HomeComponent.MinDate;
+    return GoalCreateComponent.MinDate;
   }
 
   public isMobile(): boolean {
