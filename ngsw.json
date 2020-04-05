@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1585942585254,
+  "timestamp": 1586099378533,
   "index": "https://gobonsai.de/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://gobonsai.de/favicon.ico",
         "https://gobonsai.de/index.html",
-        "https://gobonsai.de/main-es2015.2af0b8c4da24bf78fa76.js",
-        "https://gobonsai.de/main-es5.2af0b8c4da24bf78fa76.js",
+        "https://gobonsai.de/main-es2015.53dd78c20151f2f20742.js",
+        "https://gobonsai.de/main-es5.53dd78c20151f2f20742.js",
         "https://gobonsai.de/manifest.webmanifest",
         "https://gobonsai.de/polyfills-es2015.3fd94ed6a324eee92aec.js",
         "https://gobonsai.de/polyfills-es5.c219b7059a7feb126472.js",
@@ -51,9 +51,9 @@
     "https://gobonsai.de/assets/icons/icon-72x72.png": "cc2dfee7446fbda4d618928ed7aef27245fed823",
     "https://gobonsai.de/assets/icons/icon-96x96.png": "e8dfa87117c64785d336bb2d8da8e2fe59ba08af",
     "https://gobonsai.de/favicon.ico": "13ed7700e2e26ece046035ff0f91589e247ccced",
-    "https://gobonsai.de/index.html": "429aaee7b01f7ec80cf880dc99c274cdf38ba605",
-    "https://gobonsai.de/main-es2015.2af0b8c4da24bf78fa76.js": "f895cacec20a2ccebb20a98df2264bc4a90be240",
-    "https://gobonsai.de/main-es5.2af0b8c4da24bf78fa76.js": "6e4bda4332c4486183d671fcc6c2cb5d7a7268d4",
+    "https://gobonsai.de/index.html": "d410de26795d51c07887d1d28800a220ab6f42b3",
+    "https://gobonsai.de/main-es2015.53dd78c20151f2f20742.js": "ed16a8cfd7fd38b9bb6fedb67811c6b7f0bfa3dd",
+    "https://gobonsai.de/main-es5.53dd78c20151f2f20742.js": "98dffd356daa47ab67d1adbdf2e2007a000698a6",
     "https://gobonsai.de/manifest.webmanifest": "64d58fac1dd04ee7d61d5d2c5e1704c5669f3629",
     "https://gobonsai.de/polyfills-es2015.3fd94ed6a324eee92aec.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "https://gobonsai.de/polyfills-es5.c219b7059a7feb126472.js": "e5472003c8575a8fca7583648df3905038faeb18",
