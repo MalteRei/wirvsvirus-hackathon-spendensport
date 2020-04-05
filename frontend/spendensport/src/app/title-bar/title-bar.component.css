@@ -12,6 +12,7 @@
     margin: 0;
     position: sticky;
     background-color: var(--color-primary);
+    z-index: 5;
 }
 
 .title{
