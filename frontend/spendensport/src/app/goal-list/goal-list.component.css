@@ -72,16 +72,14 @@ mat-card-header {
   display: flex;
   align-items: center;
 }
-
+/*
 button {
   color: var(--gradient);
-  margin: auto;
   border-color: var(--color-highlight);
-  align-content: center;
-  size: auto;
+  
 
 }
-
+*/
 .add-goal-button{
   width: 64px;
   height: 64px;
@@ -154,7 +152,12 @@ button {
 }
 
 .delete-goal{
+  margin: auto;
+  align-content: center;
+  size: auto;
   margin-right: 64px;
+
+
 }
 
 .card-img {

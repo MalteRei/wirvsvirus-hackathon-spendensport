@@ -20,7 +20,7 @@
   
   <div class="todo-list">
     <label class="todo">
-      <input [(ngModel)]="model" (ngModelChange)="onCheckboxChange($event)" class="todo__state" type="checkbox" />
+      <input (keyup.enter)="onCheckBoxEnter()" tabindex="0" [(ngModel)]="model" (ngModelChange)="onCheckboxChange($event)" class="todo__state" type="checkbox" />
       
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 25" class="todo__icon">
         <use xlink:href="#todo__line" class="todo__line"></use>

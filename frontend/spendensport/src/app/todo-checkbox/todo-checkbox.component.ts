@@ -31,4 +31,9 @@ export class TodoCheckboxComponent implements OnInit {
   onCheckboxChange(newValue: boolean): void {
     this.ModelChange.emit(this.model);
   }
+
+  onCheckBoxEnter() {
+    this.Model = !this.Model;
+    this.onCheckboxChange(this.Model);
+  }
 }

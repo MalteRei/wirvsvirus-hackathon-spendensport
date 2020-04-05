@@ -30,7 +30,6 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {MatMenuModule} from '@angular/material/menu';
 import { TodoCheckboxComponent } from './todo-checkbox/todo-checkbox.component';
-import { ButtonComponent } from './button/button.component';
 import { LogoBonsaiLoveComponent } from './logo-bonsai-love/logo-bonsai-love.component';
 
 
@@ -49,7 +48,6 @@ export const configFactory = (configService: ConfigService) => {
     LogoBonsaiComponent,
     TitleBarComponent,
     TodoCheckboxComponent,
-    ButtonComponent,
     LogoBonsaiLoveComponent
   ],
   imports: [
