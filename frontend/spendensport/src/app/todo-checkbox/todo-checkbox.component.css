@@ -21,6 +21,7 @@
     left: 0;
     opacity: 0;
   }
+ 
   .todo__text {
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -135,5 +136,11 @@
   .todo__state:checked ~ .todo__icon .todo__circle {
     -webkit-animation-name: explode;
             animation-name: explode;
+  }
+
+  .todo__state:focus ~ .todo__icon{
+    border-radius: 4px;
+       
+    border: solid 2px var(--color-highlight);
   }
  
