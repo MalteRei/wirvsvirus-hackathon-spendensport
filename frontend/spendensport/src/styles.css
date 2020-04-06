@@ -311,8 +311,12 @@ button:focus {
     background-color: transparent;
     border: none;
     font-size: 42px;
+    color: var(--color-text-primary);
     padding: 8px;
   }
+
+
+
   input:focus{
     outline: none;
   }

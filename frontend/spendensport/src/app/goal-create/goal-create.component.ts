@@ -4,6 +4,7 @@ import { Goal } from '../models/Goal';
 import { GoalStoreService } from '../services/goal-store.service';
 import {Router} from '@angular/router';
 import { GoalCreationService } from '../services/goal-creation.service';
+import { formatDate } from '@angular/common';
 
 
 @Component({
@@ -23,20 +24,13 @@ export class GoalCreateComponent implements OnInit {
 
   constructor(private goalCreationService: GoalCreationService) { }
 
-  private static readonly MinDate = new Date();
+  private static readonly MinDate = formatDate(new Date(), 'yyyy-MM-dd', 'en-US');
 
 
-  public get minDate(): Date {
+  public get minDate(): string {
     return GoalCreateComponent.MinDate;
   }
 
-  public minDateString(): string{
-    const minDate = this.minDate;
-    const stringDate = minDate.getFullYear() + '-' + minDate.getUTCMonth() + '-' + minDate.getDate();
-    console.log(stringDate);
-    return stringDate;
-
-  }
 
   public isMobile(): boolean {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(window.navigator.userAgent);
