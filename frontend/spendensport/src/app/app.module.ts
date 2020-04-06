@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigService } from './services/config.service';
-import { HomeComponent } from './home/home.component';
 
 import {FormsModule} from '@angular/forms';
 import { GoalListComponent } from './goal-list/goal-list.component';
@@ -31,6 +30,7 @@ import { environment } from '../environments/environment';
 import {MatMenuModule} from '@angular/material/menu';
 import { TodoCheckboxComponent } from './todo-checkbox/todo-checkbox.component';
 import { LogoBonsaiLoveComponent } from './logo-bonsai-love/logo-bonsai-love.component';
+import { GoalCreateComponent } from './goal-create/goal-create.component';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -41,7 +41,7 @@ export const configFactory = (configService: ConfigService) => {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    GoalCreateComponent,
     GoalListComponent,
     DonationListComponent,
     DonationTileComponent,
