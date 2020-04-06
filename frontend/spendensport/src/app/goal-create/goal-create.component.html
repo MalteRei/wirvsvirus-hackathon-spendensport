@@ -20,6 +20,7 @@
       <input  [min]="minDate"
               name="goal-date"
               [(ngModel)] = 'currentGoal.date'
+              aria-label="Ziel Frist"
               type="date">
 
     </div>
@@ -34,6 +35,7 @@
         [(ngModel)]="currentGoal.stake"
         name="goal-stake"
         #stake="ngModel"
+        aria-label="Spendenwert wenn Ziel nicht erreicht"
         >
         <mat-icon matSuffix>euro_symbol</mat-icon>
 
