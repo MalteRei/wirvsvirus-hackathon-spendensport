@@ -12,6 +12,8 @@ Here are some important resources:
   * ["What Corona, donations and sport have in common"](https://emzudemo.de/txt/was-corona-spenden-und-sport-miteinander-zu-tun-haben-koennten) tells your how this got started,
   * [explination video](https://youtu.be/y0UAtoeRgl8) shows in under 2 minutes what GoBonsai is all about, and
   * at [devpost project](https://devpost.com/software/spendenchallenge) you will find detailed information on where we are going.
+  * In [Concept and Archticture](https://github.com/MalteRei/wirvsvirus-hackathon-spendensport/tree/master/Concept_and_Architecture) you can see the what we plan to do 
+  * On our [Kanban Board](https://github.com/MalteRei/wirvsvirus-hackathon-spendensport/projects/1) you can find an overview of the current issues
 
 In case you have any questions feel free to write us an email to team@gobonsai.org
 
