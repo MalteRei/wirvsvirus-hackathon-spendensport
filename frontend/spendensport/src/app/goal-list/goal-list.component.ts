@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GoalStoreService } from '../services/goal-store.service';
 import { IGoal } from '../models/IGoal';
+import { GoalCreationService } from '../services/goal-creation.service';
 
 @Component({
   selector: 'app-goal-list',
@@ -9,10 +10,17 @@ import { IGoal } from '../models/IGoal';
 })
 export class GoalListComponent implements OnInit {
 
-  public goals: Array<IGoal>;
+  private Goals: Array<IGoal>;
+  public get goals(): Array<IGoal> {
+    return this.Goals;
+  }
+  public get showGoalCreateButton() {
+    return !this.goalCreationService.isGoalCreationDialogVisible;
+  }
 
-  constructor(private goalStoreService: GoalStoreService) {
-    this.goals = goalStoreService.goals;
+
+  constructor(private goalStoreService: GoalStoreService, private goalCreationService: GoalCreationService) {
+    this.Goals = goalStoreService.goals;
   }
 
   ngOnInit(): void {
@@ -24,6 +32,11 @@ export class GoalListComponent implements OnInit {
 
   public deleteGoal(goal: IGoal) {
     this.goalStoreService.removeGoal(goal);
+  }
+
+  public createGoalButtonClicked() {
+    this.goalCreationService.showGoalCreation();
+    this.goalCreationService.showGoalCreationDialog = true;
   }
 
 

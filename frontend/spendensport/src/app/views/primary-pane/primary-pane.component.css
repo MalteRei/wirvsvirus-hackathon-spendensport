@@ -1,0 +1,5 @@
+.dual-screen-view-pane {
+    /*background-color: greenyellow;*/
+    position: absolute;
+    overflow: auto;
+}

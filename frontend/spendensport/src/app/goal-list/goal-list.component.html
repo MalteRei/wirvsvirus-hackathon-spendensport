@@ -27,5 +27,5 @@
 
 
 </div>
-<a role="navigation" class="add-goal-button"  routerLink="/goal"><i style="color: var(--color-highlight);" class="material-icons">add</i>Neues Ziel hinzufügen</a>
+<button type="button" (click)="createGoalButtonClicked()" *ngIf="showGoalCreateButton" role="navigation" class="add-goal-button" ><i style="color: var(--color-highlight);" class="material-icons">add</i>Neues Ziel hinzufügen</button>
 

@@ -1,5 +1,5 @@
 
-<app-title-bar backLinkUrl="/goals" backLinkName="Ziele" titleHeader="Ziel setzen"></app-title-bar>
+<app-title-bar (backLinkClickedEmitter)="handleBackToGoals($event)" backLinkName="Ziele" titleHeader="Ziel setzen"></app-title-bar>
 
 <div class="main-container">
 <form #goalForm="ngForm" class="content">
@@ -19,7 +19,7 @@
       <h2>bis zum:</h2>
       <input  [min]="minDate"
               name="goal-date"
-              [(ngModel)] = 'currentGoal.date'
+              [(ngModel)] = 'date'
               aria-label="Ziel Frist"
               type="date">
 
@@ -42,7 +42,7 @@
     </div>
       <h2>an folgende Organisation:</h2>
 
-    <app-button routerLink="/donations">Organisation auswählen</app-button>
+    <button type="button" (click)="submitGoal()">Organisation auswählen</button>
 
   </div>
 </div>

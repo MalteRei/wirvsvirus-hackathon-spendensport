@@ -1,0 +1,5 @@
+<ng-container [ngSwitch]="goalCreationState">
+    <app-goal-create *ngSwitchCase="goalCreationStateEnum.Goalcreation"></app-goal-create>
+    <app-donation-list *ngSwitchCase="goalCreationStateEnum.Donationselection"></app-donation-list>
+    <h2 *ngSwitchDefault>Are you on track to reach all your goals for today?</h2>
+</ng-container>

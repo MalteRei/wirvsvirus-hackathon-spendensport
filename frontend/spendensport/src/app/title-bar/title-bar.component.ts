@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-title-bar',
@@ -8,11 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TitleBarComponent implements OnInit {
 
   @Input() titleHeader = 'Bonsai';
-  @Input() backLinkName: string | undefined;
-  @Input() backLinkUrl: string | undefined;
+  @Input() backLinkName: string | undefined = undefined;
+  @Input() backLinkUrl: string | undefined = undefined;
+  @Output() backLinkClickedEmitter = new EventEmitter<Event>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public backLinkClicked(event: Event): void {
+    this.backLinkClickedEmitter.emit(event);
   }
 
 }

@@ -31,6 +31,10 @@ import {MatMenuModule} from '@angular/material/menu';
 import { TodoCheckboxComponent } from './todo-checkbox/todo-checkbox.component';
 import { LogoBonsaiLoveComponent } from './logo-bonsai-love/logo-bonsai-love.component';
 import { GoalCreateComponent } from './goal-create/goal-create.component';
+import { TwoPaneViewModule } from './views/two-pane-view-module/two-pane-view.module';
+import { PrimaryPaneComponent } from './views/primary-pane/primary-pane.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { GoalCreationDialogComponent } from './goal-creation-dialog/goal-creation-dialog.component';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -48,7 +52,10 @@ export const configFactory = (configService: ConfigService) => {
     LogoBonsaiComponent,
     TitleBarComponent,
     TodoCheckboxComponent,
-    LogoBonsaiLoveComponent
+    LogoBonsaiLoveComponent,
+    PrimaryPaneComponent,
+    HomeScreenComponent,
+    GoalCreationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +72,8 @@ export const configFactory = (configService: ConfigService) => {
     MatCheckboxModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    TwoPaneViewModule
   ],
   providers: [
     {

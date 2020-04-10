@@ -3,6 +3,7 @@ import { IBetterplaceResponseProjects } from '../models/IBetterplaceResponseProj
 import { DonationService } from '../services/donation.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { GoalCreationService, GoalCreationState } from '../services/goal-creation.service';
 
 @Component({
   selector: 'app-donation-list',
@@ -25,7 +26,7 @@ export class DonationListComponent implements OnInit, OnDestroy {
   public set projectDonations(value: IBetterplaceResponseProjects) {
     this.ProjectDonations = value;
   }
-  constructor(private donationService: DonationService) { }
+  constructor(private donationService: DonationService, private goalCreationService: GoalCreationService) { }
 
   ngOnInit(): void {
     this.donationService.getDonationList().pipe(takeUntil(this.ngUnsubscribe)).subscribe(
@@ -44,6 +45,10 @@ export class DonationListComponent implements OnInit, OnDestroy {
   public ngOnDestroy() {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
-}
+  }
+
+  public handleBackToGoalCreate(event: Event): void {
+    this.goalCreationService.showGoalCreation();
+  }
 
 }
