@@ -17,6 +17,27 @@ export class TwoPaneViewContentDirective {
     private TwoPaneMinWidthSingleSegment = 0;
     private TwoPaneMinHeightSingleSegment = 0;
     private TwoPaneSpanningModeSingleSegment = 'none';
+    private PrimaryPanePercentageSingleSegment = 50;
+    public get primaryPanePercentageSingleSegment() {
+        return this.PrimaryPanePercentageSingleSegment;
+    }
+    @Input() public set primaryPanePercentageSingleSegment(value: number) {
+        if (typeof value === 'string') {
+            const fractionValue = Number(value);
+            if (!isNaN(fractionValue) && fractionValue >= 0 && fractionValue <= 100) {
+                this.PrimaryPanePercentageSingleSegment = fractionValue;
+                this.updateView();
+
+            }
+
+        } else if (typeof value === 'number') {
+            if (value >= 0 && value <= 100) {
+                this.PrimaryPanePercentageSingleSegment = value;
+                this.updateView();
+
+            }
+        }
+    }
     private readonly paneFactory = this.componentfactoryResolver.resolveComponentFactory(PrimaryPaneComponent);
     private primaryPaneRef: ComponentRef<PrimaryPaneComponent> = null;
     private secondaryPaneRef: ComponentRef<PrimaryPaneComponent> = null;
@@ -50,9 +71,9 @@ export class TwoPaneViewContentDirective {
     }
 
     private destroySecondaryPaneRef() {
-        if(this.secondaryPaneRef) {
+        if (this.secondaryPaneRef) {
             const secondaryPaneIndex = this.viewContainer.indexOf(this.secondaryPaneRef.hostView);
-            if(secondaryPaneIndex >= 0) {
+            if (secondaryPaneIndex >= 0) {
                 this.viewContainer.remove(secondaryPaneIndex);
             }
             this.secondaryPaneRef.destroy();
@@ -61,9 +82,9 @@ export class TwoPaneViewContentDirective {
     }
 
     private destroyPrimaryPaneRef() {
-        if(this.primaryPaneRef) {
+        if (this.primaryPaneRef) {
             const primaryPaneIndex = this.viewContainer.indexOf(this.primaryPaneRef.hostView);
-            if( primaryPaneIndex >= 0) {
+            if (primaryPaneIndex >= 0) {
                 this.viewContainer.remove(primaryPaneIndex);
             }
             this.primaryPaneRef.destroy();
@@ -78,38 +99,45 @@ export class TwoPaneViewContentDirective {
     }
 
     @Input() set twoPaneMinWidthSingleSegment(minWidth: number) {
-        console.dir(typeof minWidth);
-        if(typeof minWidth === 'string') {
+        if (typeof minWidth === 'string') {
             const minWidthValue = Number(minWidth);
-            if(minWidthValue >= 0 && minWidthValue !== NaN) {
+            if (minWidthValue >= 0 && !isNaN(minWidthValue)) {
                 this.TwoPaneMinWidthSingleSegment = minWidthValue;
                 this.updateView();
 
             }
-        } else if(typeof minWidth === 'number') {
+        } else if (typeof minWidth === 'number') {
             this.TwoPaneMinWidthSingleSegment = minWidth;
             this.updateView();
         }
-        
+
     }
 
     @Input() set twoPaneMinHeightSingleSegment(minHeight: number) {
-        this.TwoPaneMinHeightSingleSegment = minHeight;
-        this.updateView();
+        if (typeof minHeight === 'string') {
+            const minHeightValue = Number(minHeight);
+            if (minHeightValue >= 0 && !isNaN(minHeightValue)) {
+                this.TwoPaneMinHeightSingleSegment = minHeightValue;
+                this.updateView();
+
+            }
+        } else if (typeof minHeight === 'number') {
+            this.TwoPaneMinHeightSingleSegment = minHeight;
+            this.updateView();
+        }
     }
 
-    
+
 
     @Input() set twoPaneSpanningModeSingleSegment(spanningMode: SpanningMode) {
-        if(spanningMode) {
+        if (spanningMode) {
             this.TwoPaneSpanningModeSingleSegment = spanningMode;
             this.updateView();
         }
     }
 
     private emitSecondaryPaneVisibility(visible: boolean) {
-        if(this.secondaryPaneVisible === undefined || this.secondaryPaneVisible === null || visible !== this.secondaryPaneVisible) {
-            console.log('emit secondary pane visible: ' + visible);
+        if (this.secondaryPaneVisible === undefined || this.secondaryPaneVisible === null || visible !== this.secondaryPaneVisible) {
             this.secondaryPaneVisible = visible;
             this.secondaryPaneVisibilityHandler.emit(visible);
         }
@@ -132,8 +160,8 @@ export class TwoPaneViewContentDirective {
             } else if (windowSegements[0].height >= this.TwoPaneMinHeightSingleSegment
                 && windowSegements[0].width > this.TwoPaneMinWidthSingleSegment
                 && this.TwoPaneSpanningModeSingleSegment !== 'none') {
-                    console.log('render both panes');
-                    this.renderBothPanes(windowSegements[0]);
+                console.log('render both panes');
+                this.renderBothPanes(windowSegements[0]);
             } else {
                 if (this.EnsureSecondaryPaneVisible) {
                     console.log('render secondary pane');
@@ -154,12 +182,14 @@ export class TwoPaneViewContentDirective {
     private renderBothPanes(windowSegment: ISegment) {
         let primarySegment: ISegment;
         let secondarySegment: ISegment;
-        if(this.TwoPaneSpanningModeSingleSegment === 'single-fold-horizontal') {
-            primarySegment = new Segment(windowSegment.width, windowSegment.height / 2, 0, 0);
-            secondarySegment = new Segment(windowSegment.width, windowSegment.height / 2, windowSegment.height / 2, 0);
-        } else if(this.TwoPaneSpanningModeSingleSegment === 'single-fold-vertical') {
-            primarySegment = new Segment(windowSegment.width / 2, windowSegment.height, 0, 0);
-            secondarySegment = new Segment(windowSegment.width / 2, windowSegment.height, 0, windowSegment.width / 2);
+        if (this.TwoPaneSpanningModeSingleSegment === 'single-fold-horizontal') {
+            const fraction = this.PrimaryPanePercentageSingleSegment / 100;
+            primarySegment = new Segment(windowSegment.width, windowSegment.height * fraction, 0, 0);
+            secondarySegment = new Segment(windowSegment.width, windowSegment.height * (1 - fraction), windowSegment.height * fraction, 0);
+        } else if (this.TwoPaneSpanningModeSingleSegment === 'single-fold-vertical') {
+            const fraction = this.PrimaryPanePercentageSingleSegment / 100;
+            primarySegment = new Segment(windowSegment.width * fraction, windowSegment.height, 0, 0);
+            secondarySegment = new Segment(windowSegment.width * (1 - fraction), windowSegment.height, 0, windowSegment.width * fraction);
         } else {
             return;
         }
@@ -180,7 +210,7 @@ export class TwoPaneViewContentDirective {
 
     private renderPrimaryPane(segment: ISegment) {
         //const paneFactory = this.componentfactoryResolver.resolveComponentFactory(PrimaryPaneComponent);
-        if(!this.primaryPaneRef) {
+        if (!this.primaryPaneRef) {
             this.primaryPaneRef = this.viewContainer.createComponent(this.paneFactory);
 
         }
@@ -193,7 +223,7 @@ export class TwoPaneViewContentDirective {
     private renderSecondaryPane(segment: ISegment) {
         if (this.secondaryPaneTemplateRef !== null && this.secondaryPaneTemplateRef !== undefined) {
             //const paneFactory = this.componentfactoryResolver.resolveComponentFactory(PrimaryPaneComponent);
-            if(!this.secondaryPaneRef) {
+            if (!this.secondaryPaneRef) {
                 this.secondaryPaneRef = this.viewContainer.createComponent(this.paneFactory);
             }
             this.secondaryPaneRef.instance.segment = segment;

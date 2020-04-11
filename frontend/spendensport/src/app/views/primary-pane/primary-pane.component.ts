@@ -8,7 +8,7 @@ import { ISegment, Segment } from '../services/dual-screen-information.service';
 })
 export class PrimaryPaneComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('viewContainer', {read: ViewContainerRef}) viewContainerRef: ViewContainerRef;
+  @ViewChild('viewContainer', {read: ViewContainerRef, static: true}) viewContainerRef: ViewContainerRef;
   
   private embeddedViewRef: EmbeddedViewRef<any> = null;
 
