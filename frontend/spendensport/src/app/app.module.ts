@@ -35,6 +35,7 @@ import { TwoPaneViewModule } from './views/two-pane-view-module/two-pane-view.mo
 import { PrimaryPaneComponent } from './views/primary-pane/primary-pane.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { GoalCreationDialogComponent } from './goal-creation-dialog/goal-creation-dialog.component';
+//import { DuoPaneDirective } from '../../../../../angular-two-pane/duo-pane-workspace/dist/duo-pane-library';
 
 
 export const configFactory = (configService: ConfigService) => {
@@ -73,7 +74,8 @@ export const configFactory = (configService: ConfigService) => {
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     MatMenuModule,
     MatButtonModule,
-    TwoPaneViewModule
+    TwoPaneViewModule,
+   // DuoPaneDirective
   ],
   providers: [
     {
