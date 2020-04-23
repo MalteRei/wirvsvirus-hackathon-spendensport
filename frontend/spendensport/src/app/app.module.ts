@@ -36,7 +36,7 @@ import { PrimaryPaneComponent } from './views/primary-pane/primary-pane.componen
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { GoalCreationDialogComponent } from './goal-creation-dialog/goal-creation-dialog.component';
 //import { DuoPaneLibraryModule } from '../../../../../angular-two-pane/duo-pane-workspace/dist/duo-pane-library';
-
+import {DuoPaneLibraryModule} from 'duo-pane-library';
 
 export const configFactory = (configService: ConfigService) => {
   return () => configService.loadConfig();
@@ -59,7 +59,7 @@ export const configFactory = (configService: ConfigService) => {
     GoalCreationDialogComponent,
   ],
   imports: [
-    //DuoPaneLibraryModule,
+    DuoPaneLibraryModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

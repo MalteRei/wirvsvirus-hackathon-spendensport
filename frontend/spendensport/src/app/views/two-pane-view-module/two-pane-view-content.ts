@@ -64,11 +64,12 @@ export class TwoPaneViewContentDirective {
 
 
 
-    @Input() set appTwoPaneView(secondaryPane: TemplateRef<any>) {
+    @Input() set secondaryPane(secondaryPane: TemplateRef<any>) {
         this.secondaryPaneTemplateRef = secondaryPane;
         this.destroySecondaryPaneRef();
         this.updateView();
     }
+
 
     private destroySecondaryPaneRef() {
         if (this.secondaryPaneRef) {

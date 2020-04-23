@@ -1,5 +1,5 @@
 <!--When using eventEmitter see: https://github.com/angular/angular/issues/12121-->
-<ng-template [appTwoPaneView]="secondaryBlock" primaryPanePercentageSingleSegment="60" [ensureSecondaryPaneVisible]="goalCreationService.showGoalCreationDialog" twoPaneMinWidthSingleSegment=1000 twoPaneSpanningModeSingleSegment="single-fold-vertical" (secondaryPaneVisibilityHandler)="secondaryPaneVisibilityChangedEventHandler($event)">
+<ng-template [duoPane] [secondaryPane]="secondaryBlock" primaryPanePercentageSingleSegment="60" [ensureSecondaryPaneVisible]="goalCreationService.showGoalCreationDialog" twoPaneMinWidthSingleSegment=1000 twoPaneSpanningModeSingleSegment="single-fold-vertical" (secondaryPaneVisibilityHandler)="secondaryPaneVisibilityChangedEventHandler($event)">
     <app-goal-list></app-goal-list>
 </ng-template>
 
