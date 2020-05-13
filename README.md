@@ -9,7 +9,7 @@ Entstanden ist die App während des #WirVsVirus Hackathon vom 20.03-22.03.2020, 
 
 [YouTube video](https://youtu.be/y0UAtoeRgl8) feel free to 👍
 
-At the moment we have an Angular frontend and a lot of ideas to implement. Please see [Concept and architecture](https://github.com/MalteRei/wirvsvirus-hackathon-spendensport/Concept-and-Architecture) for the game plan. A very early prototype can be seen at [gobonsai.de](https://gobonsai.de/goals)
+At the moment we have an Angular frontend and a lot of ideas to implement. Please see [Concept and architecture](https://github.com/MalteRei/wirvsvirus-hackathon-spendensport/tree/master/Concept_and_Architecture) for the game plan. A very early prototype can be seen at [gobonsai.de](https://gobonsai.de/goals)
 
 Please follow our [code of conduct](https://github.com/MalteRei/wirvsvirus-hackathon-spendensport/blob/master/CODE_OF_CONDUCT.md) 👨‍👩‍👧‍👦
 
